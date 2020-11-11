@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj": {}
+    "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj": {
+    "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj",
+        "projectUniqueName": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj",
         "projectName": "DataServiceLib",
-        "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj",
-        "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\obj\\",
+        "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj",
+        "packagesPath": "/Users/mathiasipedersen/.nuget/packages/",
+        "outputPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/mathiasipedersen/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +43,10 @@
             "Microsoft.Extensions.Logging.Console": {
               "target": "Package",
               "version": "[3.1.9, )"
+            },
+            "Microsoft.Net.Http.Headers": {
+              "target": "Package",
+              "version": "[2.2.8, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -83,7 +81,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
         }
       }
     }

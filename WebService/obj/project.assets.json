@@ -666,10 +666,10 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
         }
       },
-      "Microsoft.Net.Http.Headers/2.1.1": {
+      "Microsoft.Net.Http.Headers/2.2.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "2.1.1",
+          "Microsoft.Extensions.Primitives": "2.2.0",
           "System.Buffers": "4.5.0"
         },
         "compile": {
@@ -2433,6 +2433,7 @@
         "dependencies": {
           "Microsoft.ApplicationInsights.AspNetCore": "2.15.0",
           "Microsoft.Extensions.Logging.Console": "3.1.9",
+          "Microsoft.Net.Http.Headers": "2.2.8",
           "Npgsql": "4.1.5",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.4",
           "Pomelo.EntityFrameworkCore.MySql": "3.2.4",
@@ -3277,16 +3278,16 @@
         "microsoft.extensions.primitives.nuspec"
       ]
     },
-    "Microsoft.Net.Http.Headers/2.1.1": {
-      "sha512": "lPNIphl8b2EuhOE9dMH6EZDmu7pS882O+HMi5BJNsigxHaWlBrYxZHFZgE18cyaPp6SSZcTkKkuzfjV/RRQKlA==",
+    "Microsoft.Net.Http.Headers/2.2.8": {
+      "sha512": "wHdwMv0QDDG2NWDSwax9cjkeQceGC1Qq53a31+31XpvTXVljKXRjWISlMoS/wZYKiqdqzuEvKFKwGHl+mt2jCA==",
       "type": "package",
-      "path": "microsoft.net.http.headers/2.1.1",
+      "path": "microsoft.net.http.headers/2.2.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll",
         "lib/netstandard2.0/Microsoft.Net.Http.Headers.xml",
-        "microsoft.net.http.headers.2.1.1.nupkg.sha512",
+        "microsoft.net.http.headers.2.2.8.nupkg.sha512",
         "microsoft.net.http.headers.nuspec"
       ]
     },
@@ -7887,38 +7888,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\peter\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/mathiasipedersen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\WebService\\WebService.csproj",
+      "projectUniqueName": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/WebService.csproj",
       "projectName": "WebService",
-      "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\WebService\\WebService.csproj",
-      "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\WebService\\obj\\",
+      "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/WebService.csproj",
+      "packagesPath": "/Users/mathiasipedersen/.nuget/packages/",
+      "outputPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/mathiasipedersen/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj": {
-              "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj"
+            "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj": {
+              "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj"
             }
           }
         }
@@ -7959,7 +7953,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
       }
     }
   }
