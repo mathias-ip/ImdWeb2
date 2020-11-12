@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kU2R+xIkp1gXrbUaNnXX8ahuygtgFnKElYwe7yBppJucaMv9vU+dELBvsdCzY4Ka3ZxEkxqvOYmoTYsihwUjwQ==",
+  "dgSpecHash": "XPrEP/UzDIskL2pmv4a9xJh3iidtUHj/DbcD58NeLK1rstJGAj3XkxS4Xe4GbprN0EmPHu4l8nCqEi/TE9B8lg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj",
+  "projectFilePath": "C:\\Users\\peter\\Source\\Repos\\ImdWebMain\\DataServiceLib\\DataServiceLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\peter\\.nuget\\packages\\microsoft.applicationinsights\\2.15.0\\microsoft.applicationinsights.2.15.0.nupkg.sha512",
     "C:\\Users\\peter\\.nuget\\packages\\microsoft.applicationinsights.aspnetcore\\2.15.0\\microsoft.applicationinsights.aspnetcore.2.15.0.nupkg.sha512",

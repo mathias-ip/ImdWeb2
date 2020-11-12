@@ -5886,11 +5886,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj",
+      "projectUniqueName": "C:\\Users\\peter\\Source\\Repos\\ImdWebMain\\DataServiceLib\\DataServiceLib.csproj",
       "projectName": "DataServiceLib",
-      "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj",
+      "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWebMain\\DataServiceLib\\DataServiceLib.csproj",
       "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\obj\\",
+      "outputPath": "C:\\Users\\peter\\Source\\Repos\\ImdWebMain\\DataServiceLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
