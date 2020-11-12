@@ -23,13 +23,13 @@ namespace DataServiceLib
             return ctx.title.ToList();
         }
 
-        public ILst<SearchResult> Search(string arg)
+        public IList<SearchResult> Search(string arg)
         {
             var ctx = new Databasecontext();
 
-            ctx.SearchResults.
+            var q = ctx.SearchResults.FromSqlInterpolated($"select * from findingname({arg})");
 
-            return null;
+            return q.ToList();
         }
 
         /*static void findingname(String[]args)

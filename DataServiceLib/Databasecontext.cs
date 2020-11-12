@@ -12,7 +12,7 @@ namespace DataServiceLib
 {
     public class Databasecontext : DbContext
     {
-        //Mathias er en nar
+        
         public static readonly ILoggerFactory MyLoggerFactory
             = LoggerFactory.Create(builder => { builder.AddConsole(); });
 
@@ -27,14 +27,22 @@ namespace DataServiceLib
             throw new NotImplementedException();
         }
 
+        public DbSet<SearchResult> SearchResults { get; set; }
+
         public DbSet<Title> title { get; set; }
- 
+       // public object SearchResults { get; internal set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {  
             modelBuilder.Entity<Title>().ToTable("title");
             modelBuilder.Entity<Title>().Property(x => x.titleid).HasColumnName("titleid");
             modelBuilder.Entity<Title>().Property(x => x.primarytitle).HasColumnName("primarytitle");
             modelBuilder.Entity<Title>().Property(x => x.titletype).HasColumnName("titletype");
+
+
+            modelBuilder.Entity<SearchResult>().HasNoKey();
+            modelBuilder.Entity<SearchResult>().Property(x => x.primaryname).HasColumnName("primaryname");
+            modelBuilder.Entity<SearchResult>().Property(x => x.category).HasColumnName("category");
 
             /*    modelBuilder.Entity<Product>().ToTable("products");
                 modelBuilder.Entity<Product>().Property(x => x.Id).HasColumnName("productid");
@@ -50,11 +58,11 @@ namespace DataServiceLib
                 //modelBuilder.Entity<Category>().Property(x => x.Description).HasColumnName("description");
              */
 
-          /*  modelBuilder.Entity<Orderdetails>().ToTable("orderdetails");
-            modelBuilder.Entity<Orderdetails>().Property(x => x.productid).HasColumnName("Íd");
-            modelBuilder.Entity<Orderdetails>().Property(x => x.productname).HasColumnName("productname");
-            modelBuilder.Entity<Orderdetails>().Property(x => x.unitprice).HasColumnName("unitprice");
-            modelBuilder.Entity<Orderdetails>().Property(x => x.quantity).HasColumnName("quantity"); */
+            /*  modelBuilder.Entity<Orderdetails>().ToTable("orderdetails");
+              modelBuilder.Entity<Orderdetails>().Property(x => x.productid).HasColumnName("Íd");
+              modelBuilder.Entity<Orderdetails>().Property(x => x.productname).HasColumnName("productname");
+              modelBuilder.Entity<Orderdetails>().Property(x => x.unitprice).HasColumnName("unitprice");
+              modelBuilder.Entity<Orderdetails>().Property(x => x.quantity).HasColumnName("quantity"); */
         }
     }
 

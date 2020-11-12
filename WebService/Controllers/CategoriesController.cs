@@ -32,10 +32,12 @@ namespace WebService.Controllers
             return Ok(_mapper.Map<IEnumerable<TitleDto>>(Titles));
         }
 
-        [HttpGet("name/{id}")]
+        [HttpGet("search/{id}")]
         public IActionResult getByName(string id)
         {
-            return Content("hej verden "  + id);
+            var result = _dataService.Search("donald");
+           return Ok(result);
+         
         }
 
 
