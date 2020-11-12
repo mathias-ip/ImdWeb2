@@ -30,7 +30,7 @@ namespace DataServiceLib
 
         public DbSet<SearchResult> SearchResults { get; set; }
 
-        public DbSet<SearchResult> structuredStringSearch { get; set; }
+        public DbSet<structuredStringSearch> structuredStringSearch { get; set; }
 
         public DbSet<Title> title { get; set; }
        // public object SearchResults { get; internal set; }
