@@ -7888,31 +7888,38 @@
     ]
   },
   "packageFolders": {
-    "/Users/mathiasipedersen/.nuget/packages/": {}
+    "C:\\Users\\peter\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/WebService.csproj",
+      "projectUniqueName": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\WebService\\WebService.csproj",
       "projectName": "WebService",
-      "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/WebService.csproj",
-      "packagesPath": "/Users/mathiasipedersen/.nuget/packages/",
-      "outputPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/obj/",
+      "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\WebService\\WebService.csproj",
+      "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\WebService\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/Users/mathiasipedersen/.config/NuGet/NuGet.Config"
+        "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj": {
-              "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj"
+            "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj": {
+              "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj"
             }
           }
         }
@@ -7953,7 +7960,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
