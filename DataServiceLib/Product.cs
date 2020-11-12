@@ -12,6 +12,6 @@ namespace DataServiceLib
         public string Name { get; set; }
         public Category Category { get; set; }
 
-        //bla22
+      
     }
 }
