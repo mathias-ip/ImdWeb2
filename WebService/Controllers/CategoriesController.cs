@@ -32,6 +32,13 @@ namespace WebService.Controllers
             return Ok(_mapper.Map<IEnumerable<TitleDto>>(Titles));
         }
 
+        [HttpGet("name/{id}")]
+        public IActionResult getByName(string id)
+        {
+            return Content("hej verden "  + id);
+        }
+
+
         /*[HttpGet("{id}")]
         public IActionResult GetCategory(int id)
         {

@@ -21,6 +21,12 @@ namespace DataServiceLib
             optionsBuilder.UseLoggerFactory(MyLoggerFactory);
             optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=191191Ippe");
         }
+
+        internal static object FromSql(string v)
+        {
+            throw new NotImplementedException();
+        }
+
         public DbSet<Title> title { get; set; }
  
         protected override void OnModelCreating(ModelBuilder modelBuilder)

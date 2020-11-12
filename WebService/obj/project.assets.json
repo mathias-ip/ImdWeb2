@@ -7884,42 +7884,36 @@
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.0",
       "DataServiceLib >= 1.0.0",
-      "Microsoft.ApplicationInsights.AspNetCore >= 2.15.0"
+      "Microsoft.ApplicationInsights.AspNetCore >= 2.15.0",
+      "Microsoft.Net.Http.Headers >= 2.2.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\peter\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/mathiasipedersen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\WebService\\WebService.csproj",
+      "projectUniqueName": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/WebService.csproj",
       "projectName": "WebService",
-      "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\WebService\\WebService.csproj",
-      "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\WebService\\obj\\",
+      "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/WebService.csproj",
+      "packagesPath": "/Users/mathiasipedersen/.nuget/packages/",
+      "outputPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/mathiasipedersen/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj": {
-              "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb2\\DataServiceLib\\DataServiceLib.csproj"
+            "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj": {
+              "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj"
             }
           }
         }
@@ -7940,6 +7934,10 @@
           "Microsoft.ApplicationInsights.AspNetCore": {
             "target": "Package",
             "version": "[2.15.0, )"
+          },
+          "Microsoft.Net.Http.Headers": {
+            "target": "Package",
+            "version": "[2.2.8, )"
           }
         },
         "imports": [
@@ -7960,7 +7958,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
       }
     }
   }
