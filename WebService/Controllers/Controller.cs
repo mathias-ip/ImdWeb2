@@ -43,7 +43,7 @@ namespace WebService.Controllers
         [HttpGet("structuredSearch/{id}")]
         public IActionResult getByName2(string id)
         {
-            var result = _dataService.StringSearch(""+ "see" + "" + "Mads Mikkelsen" + "123");
+            var result = _dataService.StringSearch("", "see" ,"" , "Mads Mikkelsen" , "123");
             return Ok(result);
 
         }

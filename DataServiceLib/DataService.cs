@@ -32,13 +32,13 @@ namespace DataServiceLib
             return q.ToList();
         }
 
-        public IList<structuredStringSearch> StringSearch(string arg)
+        public IList<structuredStringSearch> StringSearch(string arg1, string arg2, string arg3, string arg4, string arg5)
         {
             var ctx = new Databasecontext();
 
-            var q = ctx.structuredStringSearch.FromSqlInterpolated($"select * from structured_string_search({arg})");
+            var v = ctx.structuredStringSearch.FromSqlInterpolated($"select * from structured_string_search({arg1},{arg2}, {arg3}, {arg4}, {arg5})");
 
-            return q.ToList();
+            return v.ToList();
 
         }
 
