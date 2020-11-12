@@ -15,6 +15,7 @@ namespace DataServiceLib
         
         public static readonly ILoggerFactory MyLoggerFactory
             = LoggerFactory.Create(builder => { builder.AddConsole(); });
+        internal object structuredSearch;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,6 +29,8 @@ namespace DataServiceLib
         }
 
         public DbSet<SearchResult> SearchResults { get; set; }
+
+        public DbSet<SearchResult> structuredStringSearch { get; set; }
 
         public DbSet<Title> title { get; set; }
        // public object SearchResults { get; internal set; }
@@ -43,6 +46,14 @@ namespace DataServiceLib
             modelBuilder.Entity<SearchResult>().HasNoKey();
             modelBuilder.Entity<SearchResult>().Property(x => x.primaryname).HasColumnName("primaryname");
             modelBuilder.Entity<SearchResult>().Property(x => x.category).HasColumnName("category");
+
+
+            modelBuilder.Entity<structuredStringSearch>().HasNoKey();
+            modelBuilder.Entity<structuredStringSearch>().Property(x => x.primarytitle).HasColumnName("primarytitle");
+            modelBuilder.Entity<structuredStringSearch>().Property(x => x.plot).HasColumnName("plot");
+            modelBuilder.Entity<structuredStringSearch>().Property(x => x.characters).HasColumnName("characters");
+            modelBuilder.Entity<structuredStringSearch>().Property(x => x.primaryname).HasColumnName("primaryname");
+            modelBuilder.Entity<structuredStringSearch>().Property(x => x.userid).HasColumnName("userid");
 
             /*    modelBuilder.Entity<Product>().ToTable("products");
                 modelBuilder.Entity<Product>().Property(x => x.Id).HasColumnName("productid");

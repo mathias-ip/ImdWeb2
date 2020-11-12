@@ -12,12 +12,12 @@ namespace WebService.Controllers
 {
     [ApiController]
     [Route("api/Titles")]
-    public class CategoriesController : ControllerBase
+    public class Controller : ControllerBase
     {
         DataService _dataService;
         private readonly IMapper _mapper;
 
-        public CategoriesController(DataService dataService, IMapper mapper)
+        public Controller(DataService dataService, IMapper mapper)
         {
             _dataService = dataService;
             _mapper = mapper;
@@ -38,6 +38,14 @@ namespace WebService.Controllers
             var result = _dataService.Search("donald");
            return Ok(result);
          
+        }
+
+        [HttpGet("structuredSearch/{id}")]
+        public IActionResult getByName2(string id)
+        {
+            var result = _dataService.Search("','see','','Mads Mikkelsen','123'");
+            return Ok(result);
+
         }
 
 
@@ -89,5 +97,6 @@ namespace WebService.Controllers
 
             return NoContent();
         }
-    */}
+    */
+    }
 }

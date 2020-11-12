@@ -32,6 +32,16 @@ namespace DataServiceLib
             return q.ToList();
         }
 
+        public IList<structuredStringSearch> Search2(string arg)
+        {
+            var ctx = new Databasecontext();
+
+            var v = ctx.structuredStringSearch.FromSqlInterpolated($"select * from structured_string_search({arg})");
+
+            return (IList<structuredStringSearch>)v.ToList();
+
+        }
+
         /*static void findingname(String[]args)
         {
             var connectionString = "host=localhost;db=imdb;uid=postgres;pwd=";
