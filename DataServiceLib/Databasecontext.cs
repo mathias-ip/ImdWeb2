@@ -55,6 +55,12 @@ namespace DataServiceLib
             modelBuilder.Entity<structuredStringSearch>().Property(x => x.primaryname).HasColumnName("primaryname");
             modelBuilder.Entity<structuredStringSearch>().Property(x => x.userid).HasColumnName("userid");
 
+
+            modelBuilder.Entity<bookmark>().HasNoKey();
+            modelBuilder.Entity<bookmark>().Property(x => x.userid).HasColumnName("userid");
+            modelBuilder.Entity<bookmark>().Property(x => x.titleid).HasColumnName("titleid");
+            modelBuilder.Entity<bookmark>().Property(x => x.nameid).HasColumnName("nameid");
+
             /*    modelBuilder.Entity<Product>().ToTable("products");
                 modelBuilder.Entity<Product>().Property(x => x.Id).HasColumnName("productid");
                // modelBuilder.Entity<Product>().Property(x => x.Name).HasColumnName("productname");
