@@ -48,7 +48,13 @@ namespace WebService.Controllers
 
         }
 
+        [HttpGet("bookmark/{id}")]
+        public IActionResult getBybookmark(string id)
+        {
+            var result = _dataService.StringBookmark("....");
+            return Ok(result);
 
+        }
         /*[HttpGet("{id}")]
         public IActionResult GetCategory(int id)
         {
