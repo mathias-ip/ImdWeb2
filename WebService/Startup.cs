@@ -41,6 +41,7 @@ namespace WebService
             app.UseRequestLogging();
 
             app.UseRouting();
+            app.UseAuth();
 
             app.UseEndpoints(endpoints =>
             {

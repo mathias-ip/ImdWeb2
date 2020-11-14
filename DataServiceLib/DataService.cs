@@ -15,12 +15,25 @@ namespace DataServiceLib
    
     public class DataService //: IDataService
     {
-        public IList<Title> Gettitle()
+        private List<User> _users = testdata.Users;
+
+        public IList<Title> Gettitle(int id)
 
         {
             var ctx = new Databasecontext();
             ctx.SaveChanges();
             return ctx.title.ToList();
+        }
+        public User GetUser(string username)
+        {
+
+            return _users.FirstOrDefault(x => x.username == username);
+
+        }
+
+        public User GetUser(int id)
+        {
+            return _users.FirstOrDefault(x => x.userid == id);
         }
 
         public IList<SearchResult> Search(string arg)

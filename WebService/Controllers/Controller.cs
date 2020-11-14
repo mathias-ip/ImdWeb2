@@ -26,10 +26,21 @@ namespace WebService.Controllers
         [HttpGet]
         public IActionResult GetTitles()
         {
-            
-            var Titles = _dataService.Gettitle();
+            if (Program.CurrentUser == null)
+            {
+                return Unauthorized();
+            }
+            try
+            {
+                var title = _dataService.Gettitle(Program.CurrentUser.userid);
 
-            return Ok(_mapper.Map<IEnumerable<TitleDto>>(Titles));
+                return Ok(_mapper.Map<IEnumerable<TitleDto>>(title));
+            }
+            catch (ArgumentException)
+            {
+                return Unauthorized();
+            }
+
         }
 
         [HttpGet("search/{id}")]
@@ -48,13 +59,13 @@ namespace WebService.Controllers
 
         }
 
-        [HttpGet("bookmark/{id}")]
+       /* [HttpGet("bookmark/{id}")]
         public IActionResult getBybookmark(string id)
         {
             var result = _dataService.StringBookmark("....");
             return Ok(result);
 
-        }
+        }*/
         /*[HttpGet("{id}")]
         public IActionResult GetCategory(int id)
         {

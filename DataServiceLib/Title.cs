@@ -15,7 +15,7 @@ namespace DataServiceLib
 
         public string titletype  { get; set; }
         
-        public string orginaltitle { get; set; }
+      /*  public string orginaltitle { get; set; }
 
         public string type { get; set; }
 
@@ -32,13 +32,13 @@ namespace DataServiceLib
         public string poster { get; set; }
 
         public string plot { get; set; }
-
+        /*
         public override string ToString()
         {
             return $"titleid = {titleid}, primarytitle = {primarytitle}, titletype = {titletype}" +
                 $"orginaltitle = {orginaltitle}, type = {type}, isadult = {isadult}, startyear = {startyear}," +
                 $"endyear = {endyear}, runtime = {runtime}, awards = {awards}, poster = {poster}, plot = {plot} ";
 
-        }
+        } */
     }
 }

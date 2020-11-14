@@ -15,12 +15,12 @@ namespace DataServiceLib
         
         public static readonly ILoggerFactory MyLoggerFactory
             = LoggerFactory.Create(builder => { builder.AddConsole(); });
-        internal object structuredSearch;
+        //internal object structuredSearch;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLoggerFactory(MyLoggerFactory);
-            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=191191Ippe");
+            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=Jegersej19");
         }
 
         internal static object FromSql(string v)
@@ -41,6 +41,21 @@ namespace DataServiceLib
             modelBuilder.Entity<Title>().Property(x => x.titleid).HasColumnName("titleid");
             modelBuilder.Entity<Title>().Property(x => x.primarytitle).HasColumnName("primarytitle");
             modelBuilder.Entity<Title>().Property(x => x.titletype).HasColumnName("titletype");
+           // modelBuilder.Entity<Title>().Property(x => x.orginaltitle).HasColumnName("orginaltitle");
+            /*modelBuilder.Entity<Title>().Property(x => x.type).HasColumnName("type");
+            modelBuilder.Entity<Title>().Property(x => x.isadult).HasColumnName("isadult");
+            modelBuilder.Entity<Title>().Property(x => x.startyear).HasColumnName("startyear");
+            modelBuilder.Entity<Title>().Property(x => x.endyear).HasColumnName("endyear");
+            modelBuilder.Entity<Title>().Property(x => x.runtime).HasColumnName("runtime");
+            modelBuilder.Entity<Title>().Property(x => x.awards).HasColumnName("awards");
+            modelBuilder.Entity<Title>().Property(x => x.poster).HasColumnName("poster");
+            modelBuilder.Entity<Title>().Property(x => x.plot).HasColumnName("plot");
+            */
+
+
+
+
+
 
 
             modelBuilder.Entity<SearchResult>().HasNoKey();
