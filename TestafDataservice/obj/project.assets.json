@@ -2,6 +2,9 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "knockoutjs/3.5.1": {
+        "type": "package"
+      },
       "Microsoft.ApplicationInsights/2.16.0": {
         "type": "package",
         "dependencies": {
@@ -2623,6 +2626,7 @@
           "Npgsql": "4.1.5",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.4",
           "Pomelo.EntityFrameworkCore.MySql": "3.2.4",
+          "knockoutjs": "3.5.1",
           "xunit": "2.4.1"
         },
         "compile": {
@@ -2635,6 +2639,19 @@
     }
   },
   "libraries": {
+    "knockoutjs/3.5.1": {
+      "sha512": "5Acbwk98GvNEevZdAWANyKd3UZWXh0ULy+nlfF2K7Qe47oQbSsEVWD9K6wddXGPn/dmeVy67WnKi8H9Z+HpS1A==",
+      "type": "package",
+      "path": "knockoutjs/3.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/knockout-3.5.1.debug.js",
+        "Content/Scripts/knockout-3.5.1.js",
+        "knockoutjs.3.5.1.nupkg.sha512",
+        "knockoutjs.nuspec"
+      ]
+    },
     "Microsoft.ApplicationInsights/2.16.0": {
       "sha512": "77RzjJe9nGn7wTOQvEFQZRdkQjETrbC4MhytzwTv2TTuoqoHvmUIzwFqE6BjjFGsHbZhYNYZg/YJbOa4kUMSSg==",
       "type": "package",
@@ -8211,37 +8228,37 @@
       "Microsoft.Net.Http.Headers >= 2.2.8",
       "Npgsql >= 4.1.5",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 3.1.4",
+      "knockoutjs >= 3.5.1",
       "xunit.extensibility.core >= 2.4.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mads Hougaard\\.nuget\\packages\\": {}
+    "/Users/mathiasipedersen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mads Hougaard\\Source\\Repos\\ImdWeb24\\TestafDataservice\\TestafDataservice.csproj",
+      "projectUniqueName": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/TestafDataservice/TestafDataservice.csproj",
       "projectName": "TestafDataservice",
-      "projectPath": "C:\\Users\\Mads Hougaard\\Source\\Repos\\ImdWeb24\\TestafDataservice\\TestafDataservice.csproj",
-      "packagesPath": "C:\\Users\\Mads Hougaard\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mads Hougaard\\Source\\Repos\\ImdWeb24\\TestafDataservice\\obj\\",
+      "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/TestafDataservice/TestafDataservice.csproj",
+      "packagesPath": "/Users/mathiasipedersen/.nuget/packages/",
+      "outputPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/TestafDataservice/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mads Hougaard\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/mathiasipedersen/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Mads Hougaard\\Source\\Repos\\ImdWeb24\\DataServiceLib\\DataServiceLib.csproj": {
-              "projectPath": "C:\\Users\\Mads Hougaard\\Source\\Repos\\ImdWeb24\\DataServiceLib\\DataServiceLib.csproj"
+            "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj": {
+              "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj"
             }
           }
         }
@@ -8254,6 +8271,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -8275,6 +8293,10 @@
             "target": "Package",
             "version": "[3.1.4, )"
           },
+          "knockoutjs": {
+            "target": "Package",
+            "version": "[3.5.1, )"
+          },
           "xunit.extensibility.core": {
             "target": "Package",
             "version": "[2.4.1, )"
@@ -8295,7 +8317,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

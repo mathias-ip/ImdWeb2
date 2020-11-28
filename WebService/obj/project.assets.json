@@ -29,6 +29,9 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "knockoutjs/3.5.1": {
+        "type": "package"
+      },
       "Microsoft.ApplicationInsights/2.16.0": {
         "type": "package",
         "dependencies": {
@@ -1682,6 +1685,7 @@
           "Npgsql": "4.1.5",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.4",
           "Pomelo.EntityFrameworkCore.MySql": "3.2.4",
+          "knockoutjs": "3.5.1",
           "xunit": "2.4.1"
         },
         "compile": {
@@ -1721,6 +1725,19 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "icon.png",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
+    "knockoutjs/3.5.1": {
+      "sha512": "5Acbwk98GvNEevZdAWANyKd3UZWXh0ULy+nlfF2K7Qe47oQbSsEVWD9K6wddXGPn/dmeVy67WnKi8H9Z+HpS1A==",
+      "type": "package",
+      "path": "knockoutjs/3.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/knockout-3.5.1.debug.js",
+        "Content/Scripts/knockout-3.5.1.js",
+        "knockoutjs.3.5.1.nupkg.sha512",
+        "knockoutjs.nuspec"
       ]
     },
     "Microsoft.ApplicationInsights/2.16.0": {
@@ -5857,37 +5874,37 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.0",
       "DataServiceLib >= 1.0.0",
       "Microsoft.ApplicationInsights.AspNetCore >= 2.16.0",
-      "Microsoft.Net.Http.Headers >= 2.2.8"
+      "Microsoft.Net.Http.Headers >= 2.2.8",
+      "knockoutjs >= 3.5.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mads Hougaard\\.nuget\\packages\\": {}
+    "/Users/mathiasipedersen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mads Hougaard\\Source\\Repos\\ImdWeb24\\WebService\\WebService.csproj",
+      "projectUniqueName": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/WebService.csproj",
       "projectName": "WebService",
-      "projectPath": "C:\\Users\\Mads Hougaard\\Source\\Repos\\ImdWeb24\\WebService\\WebService.csproj",
-      "packagesPath": "C:\\Users\\Mads Hougaard\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mads Hougaard\\Source\\Repos\\ImdWeb24\\WebService\\obj\\",
+      "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/WebService.csproj",
+      "packagesPath": "/Users/mathiasipedersen/.nuget/packages/",
+      "outputPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mads Hougaard\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/mathiasipedersen/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Mads Hougaard\\Source\\Repos\\ImdWeb24\\DataServiceLib\\DataServiceLib.csproj": {
-              "projectPath": "C:\\Users\\Mads Hougaard\\Source\\Repos\\ImdWeb24\\DataServiceLib\\DataServiceLib.csproj"
+            "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj": {
+              "projectPath": "/Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/DataServiceLib/DataServiceLib.csproj"
             }
           }
         }
@@ -5900,6 +5917,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
@@ -5912,6 +5930,10 @@
           "Microsoft.Net.Http.Headers": {
             "target": "Package",
             "version": "[2.2.8, )"
+          },
+          "knockoutjs": {
+            "target": "Package",
+            "version": "[3.5.1, )"
           }
         },
         "imports": [
@@ -5932,7 +5954,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }
