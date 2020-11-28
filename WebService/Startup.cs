@@ -39,6 +39,7 @@ namespace WebService
             // app.UseMiddleware<RequestLoggerMiddleware>();
 
             app.UseRequestLogging();
+            app.UseFileServer();
 
             app.UseRouting();
             app.UseAuth();
