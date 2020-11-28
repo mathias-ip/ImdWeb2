@@ -15,4 +15,8 @@
     <ProjectReference Include="..\DataServiceLib\DataServiceLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\" />
+  </ItemGroup>
+
 </Project>
