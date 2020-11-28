@@ -10,7 +10,7 @@
       "NETCOREAPP",
       "NETCOREAPP3_1"
     ],
-    "languageVersion": "",
+    "languageVersion": "8.0",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -28,6 +28,7 @@
           "DataServiceLib": "1.0.0",
           "Microsoft.ApplicationInsights.AspNetCore": "2.16.0",
           "Microsoft.Net.Http.Headers": "2.2.8",
+          "knockoutjs": "3.5.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -332,6 +333,7 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "knockoutjs/3.5.1": {},
       "Microsoft.ApplicationInsights/2.16.0": {
         "dependencies": {
           "System.Diagnostics.DiagnosticSource": "5.0.0"
@@ -1519,6 +1521,7 @@
           "Npgsql": "4.1.5",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.4",
           "Pomelo.EntityFrameworkCore.MySql": "3.2.4",
+          "knockoutjs": "3.5.1",
           "xunit": "2.4.1"
         },
         "runtime": {
@@ -3139,6 +3142,13 @@
       "sha512": "sha512-dQyGCAYcHbGuimVvCMu4Ea2S1oYOlgO9XfVdClmY5wgygJMZoS57emPzH0qNfknmtzMm4QbDO9i237W5IDjU1A==",
       "path": "automapper.extensions.microsoft.dependencyinjection/8.1.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512"
+    },
+    "knockoutjs/3.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5Acbwk98GvNEevZdAWANyKd3UZWXh0ULy+nlfF2K7Qe47oQbSsEVWD9K6wddXGPn/dmeVy67WnKi8H9Z+HpS1A==",
+      "path": "knockoutjs/3.5.1",
+      "hashPath": "knockoutjs.3.5.1.nupkg.sha512"
     },
     "Microsoft.ApplicationInsights/2.16.0": {
       "type": "package",

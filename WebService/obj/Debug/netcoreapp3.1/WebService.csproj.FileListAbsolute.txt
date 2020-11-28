@@ -401,3 +401,4 @@ C:/Users/Mads Hougaard/Source/Repos/ImdWeb23/WebService/obj/Debug/netcoreapp3.1/
 /Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/obj/Debug/netcoreapp3.1/WebService.pdb
 /Users/mathiasipedersen/Documents/github/imdbWeb-3f30b166b6e98f5268870bf6ac8b882dbabcfa9d/WebService/obj/Debug/netcoreapp3.1/WebService.genruntimeconfig.cache
 >>>>>>> Stashed changes
+C:\Users\Mads Hougaard\Source\Repos\ImdWeb24\WebService\bin\Debug\netcoreapp3.1\WebService.Views.pdb
