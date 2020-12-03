@@ -8233,38 +8233,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\peter\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/mathiasipedersen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\peter\\Source\\Repos\\ImdWeb25\\TestafDataservice\\TestafDataservice.csproj",
+      "projectUniqueName": "/Users/mathiasipedersen/Projects/ImdWeb2/TestafDataservice/TestafDataservice.csproj",
       "projectName": "TestafDataservice",
-      "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb25\\TestafDataservice\\TestafDataservice.csproj",
-      "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb25\\TestafDataservice\\obj\\",
+      "projectPath": "/Users/mathiasipedersen/Projects/ImdWeb2/TestafDataservice/TestafDataservice.csproj",
+      "packagesPath": "/Users/mathiasipedersen/.nuget/packages/",
+      "outputPath": "/Users/mathiasipedersen/Projects/ImdWeb2/TestafDataservice/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/mathiasipedersen/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\peter\\Source\\Repos\\ImdWeb25\\DataServiceLib\\DataServiceLib.csproj": {
-              "projectPath": "C:\\Users\\peter\\Source\\Repos\\ImdWeb25\\DataServiceLib\\DataServiceLib.csproj"
+            "/Users/mathiasipedersen/Projects/ImdWeb2/DataServiceLib/DataServiceLib.csproj": {
+              "projectPath": "/Users/mathiasipedersen/Projects/ImdWeb2/DataServiceLib/DataServiceLib.csproj"
             }
           }
         }
@@ -8277,6 +8271,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -8322,7 +8317,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

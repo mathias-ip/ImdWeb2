@@ -24,7 +24,6 @@ function LoginModel() {
 		self.loggingIn(true);
 		$.ajax({
 			type: 'POST',
-			url: 'oauth/token',
 			dataType: 'json',
 			data: requestData,
 			beforeSend: function (xhr) {
@@ -33,8 +32,8 @@ function LoginModel() {
 			success: function (data, status, xhr) {
 				console.log(data);
 				localStorage.setItem("pro2olAuthToken", JSON.stringify(data));
-				navModel.init();
-				window.location.hash = "/"
+				/*navModel.init();
+				window.location.hash = "/"*/
 			},
 			error: function (data) {
 				self.loggingIn(false);
