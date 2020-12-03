@@ -46,3 +46,12 @@ C:/Users/Mads Hougaard/Source/Repos/ImdWeb24/DataServiceLib/obj/Debug/netstandar
 /Users/mathiasipedersen/Projects/ImdWeb2/DataServiceLib/obj/Debug/netstandard2.0/DataServiceLib.csproj.CoreCompileInputs.cache
 /Users/mathiasipedersen/Projects/ImdWeb2/DataServiceLib/obj/Debug/netstandard2.0/DataServiceLib.dll
 /Users/mathiasipedersen/Projects/ImdWeb2/DataServiceLib/obj/Debug/netstandard2.0/DataServiceLib.pdb
+C:\Users\peter\Source\Repos\ImdWeb24\DataServiceLib\bin\Debug\netstandard2.0\DataServiceLib.deps.json
+C:\Users\peter\Source\Repos\ImdWeb24\DataServiceLib\bin\Debug\netstandard2.0\DataServiceLib.dll
+C:\Users\peter\Source\Repos\ImdWeb24\DataServiceLib\bin\Debug\netstandard2.0\DataServiceLib.pdb
+C:\Users\peter\Source\Repos\ImdWeb24\DataServiceLib\obj\Debug\netstandard2.0\DataServiceLib.csprojAssemblyReference.cache
+C:\Users\peter\Source\Repos\ImdWeb24\DataServiceLib\obj\Debug\netstandard2.0\DataServiceLib.AssemblyInfoInputs.cache
+C:\Users\peter\Source\Repos\ImdWeb24\DataServiceLib\obj\Debug\netstandard2.0\DataServiceLib.AssemblyInfo.cs
+C:\Users\peter\Source\Repos\ImdWeb24\DataServiceLib\obj\Debug\netstandard2.0\DataServiceLib.csproj.CoreCompileInputs.cache
+C:\Users\peter\Source\Repos\ImdWeb24\DataServiceLib\obj\Debug\netstandard2.0\DataServiceLib.dll
+C:\Users\peter\Source\Repos\ImdWeb24\DataServiceLib\obj\Debug\netstandard2.0\DataServiceLib.pdb
