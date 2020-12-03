@@ -8,16 +8,8 @@
 
   <ItemGroup>
     <None Remove="View\Index.html" />
-    <None Remove="View\Login.html" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="View\index.html" />
-    <Content Include="View\Login.html">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.16.0" />
