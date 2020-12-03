@@ -8,10 +8,15 @@
 
   <ItemGroup>
     <None Remove="View\Index.html" />
+    <None Remove="View\Login.html" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="View\index.html" />
+    <Content Include="View\Login.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
@@ -22,10 +27,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataServiceLib\DataServiceLib.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
 </Project>
