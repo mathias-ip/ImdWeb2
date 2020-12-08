@@ -47,25 +47,25 @@ namespace WebService.Controllers
         public IActionResult getByName(string id)
         {
             var result = _dataService.Search(id);
-           return Ok(result);
-         
+            return Ok(result);
+
         }
 
         [HttpGet("structuredSearch/{id}")]
         public IActionResult getByName2(string id)
         {
-            var result = _dataService.StringSearch("", "see" ,"" , "Mads Mikkelsen" , "123");
+            var result = _dataService.StringSearch("", "see", "", "Mads Mikkelsen", "123");
             return Ok(result);
 
         }
 
-       /* [HttpGet("bookmark/{id}")]
-        public IActionResult getBybookmark(string id)
-        {
-            var result = _dataService.StringBookmark("....");
-            return Ok(result);
+        /* [HttpGet("bookmark/{id}")]
+         public IActionResult getBybookmark(string id)
+         {
+             var result = _dataService.StringBookmark("....");
+             return Ok(result);
 
-        }*/
+         }*/
         /*[HttpGet("{id}")]
         public IActionResult GetCategory(int id)
         {
