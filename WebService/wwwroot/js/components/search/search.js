@@ -17,7 +17,7 @@ define(['knockout']), (ko) => {
 }
 
 let getNames = (callback) => {
-    fetch('search/{id}')
+    fetch('api/Titles/search/'+ id)
         .then(response => response.json())
         .then(callback);
 
@@ -25,6 +25,4 @@ let getNames = (callback) => {
 
 getNames(x => {
     names(x)
-    )
-
-}
+});
