@@ -16,6 +16,10 @@ require.config({
 });
 
 require(['knockout', 'text'], (ko) => {
+       ko.components.register('login', {
+        viewModel: { require: "components/login/login" },
+        template: { require: "text!components/login/login.html" }
+    });
     ko.components.register('home', {
         viewModel: { require: "components/home/home" },
         template: { require: "text!components/home/home.html" }
@@ -28,10 +32,6 @@ require(['knockout', 'text'], (ko) => {
     ko.components.register('search', {
         viewModel: { require: "components/search/search" },
         template: { require: "text!components/search/search.html" }
-    });
-       ko.components.register('login', {
-        viewModel: { require: "components/login/login" },
-        template: { require: "text!components/login/login.html" }
     });
 });
 
