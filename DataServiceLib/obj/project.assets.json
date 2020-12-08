@@ -5791,29 +5791,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/mathiasipedersen/.nuget/packages/": {}
+    "C:\\Users\\Mads Hougaard\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mathiasipedersen/Projects/ImdWeb2/DataServiceLib/DataServiceLib.csproj",
+      "projectUniqueName": "C:\\Test\\ImdWeb25\\DataServiceLib\\DataServiceLib.csproj",
       "projectName": "DataServiceLib",
-      "projectPath": "/Users/mathiasipedersen/Projects/ImdWeb2/DataServiceLib/DataServiceLib.csproj",
-      "packagesPath": "/Users/mathiasipedersen/.nuget/packages/",
-      "outputPath": "/Users/mathiasipedersen/Projects/ImdWeb2/DataServiceLib/obj/",
+      "projectPath": "C:\\Test\\ImdWeb25\\DataServiceLib\\DataServiceLib.csproj",
+      "packagesPath": "C:\\Users\\Mads Hougaard\\.nuget\\packages\\",
+      "outputPath": "C:\\Test\\ImdWeb25\\DataServiceLib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/mathiasipedersen/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Mads Hougaard\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "projectReferences": {}
         }
       },
@@ -5825,7 +5826,6 @@
     },
     "frameworks": {
       "netstandard2.0": {
-        "targetAlias": "netstandard2.0",
         "dependencies": {
           "Microsoft.ApplicationInsights.AspNetCore": {
             "target": "Package",
@@ -5876,7 +5876,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

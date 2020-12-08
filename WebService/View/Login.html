@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<style>
+.box {
+width 300px;
+height 300px;
+border: 10px solid green;
+padding: 50px;
+padding-bottom: 50px;
+text-align: center;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id ="main">
+<div id ="main_content">
+<div class="w3-container w3-col s12 m12 l12 w3-padding-16">
+<div class="box">
+<h1>Dette er en loginside!</h1>
+<b>Søgefelt til films</b>
+<input data-bind="textInput: firstName"/>
+<button data-bind="click: clickButton">søg!</button>
+<ul data-bind="foreach: names">
+    <li>
+        <h3>Resultater: </h3>   
+        <span data-bind="text: name"></span>
+    </li>
+
+
+<!-- <div data-bind="text: fullName"></div> -->
+
+<!--<button data-bind="click: clickButton">Click Me</button> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</ul>
+     <div>
+    <div>
+    
+
+<br>
+<br>
+<br>
+<br>
+<script data-main="js/main.js" src="js/lib/require.js/require.js"></script>
+</div>
+</div>  
+
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<div class="w3-container w3-col s12 m12 l12 w-padding-16">
+<h1>Example</h1>
+<b>Hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej hej</b>
+</div>
+<input data-bind="textInput: firstName"/>
+<input data-bind="textInput: lastName" />
+<div data-bind="text: fullName"></div>
+<button data-bind="click: clickButton">Click Me</button>
+
+<ul data-bind="foreach: names">
+    <li>
+        <span data-bind="text: name"></span>
+        <button data-bind="click: $parent.deleteName">Del</button>
+    </li>
+</ul>
+<script data-main="js/main.js" src="js/lib/require.js/require.js"></script>
+</body>
+</html>
