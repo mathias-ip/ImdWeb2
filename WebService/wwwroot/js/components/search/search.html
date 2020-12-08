@@ -37,14 +37,14 @@
 
 
 
-<table id="myTable">
+<table id="myTable" data-bind="foreach: names">
     <tr class="header">
         <th style="width:60%;">name</th>
         <th style="width:40%;">birthyear</th>
         <th style="width:40%;">deathyear</th>
     </tr>
     <tr>
-        <td>Testperson</td>
+        <td data-bind="text: primaryname">Testperson</td>
         <td>0001</td>
         <td>0002</td>
     </tr>

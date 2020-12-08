@@ -10,3 +10,21 @@
         };
     }
 });
+
+define(['knockout']), (ko) => {
+    let names = ko.observableArray();
+
+}
+
+let getNames = (callback) => {
+    fetch('search/{id}')
+        .then(response => response.json())
+        .then(callback);
+
+};
+
+getNames(x => {
+    names(x)
+    )
+
+}

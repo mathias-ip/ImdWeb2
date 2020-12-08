@@ -46,7 +46,7 @@ namespace WebService.Controllers
         [HttpGet("search/{id}")]
         public IActionResult getByName(string id)
         {
-            var result = _dataService.Search("Trump");
+            var result = _dataService.Search(id);
            return Ok(result);
          
         }

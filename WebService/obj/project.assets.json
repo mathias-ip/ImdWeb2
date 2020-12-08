@@ -5879,33 +5879,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mads Hougaard\\.nuget\\packages\\": {}
+    "/Users/mathiasipedersen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Test\\ImdWeb25\\WebService\\WebService.csproj",
+      "projectUniqueName": "/Users/mathiasipedersen/Projects/ImdWeb2/WebService/WebService.csproj",
       "projectName": "WebService",
-      "projectPath": "C:\\Test\\ImdWeb25\\WebService\\WebService.csproj",
-      "packagesPath": "C:\\Users\\Mads Hougaard\\.nuget\\packages\\",
-      "outputPath": "C:\\Test\\ImdWeb25\\WebService\\obj\\",
+      "projectPath": "/Users/mathiasipedersen/Projects/ImdWeb2/WebService/WebService.csproj",
+      "packagesPath": "/Users/mathiasipedersen/.nuget/packages/",
+      "outputPath": "/Users/mathiasipedersen/Projects/ImdWeb2/WebService/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mads Hougaard\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/mathiasipedersen/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Test\\ImdWeb25\\DataServiceLib\\DataServiceLib.csproj": {
-              "projectPath": "C:\\Test\\ImdWeb25\\DataServiceLib\\DataServiceLib.csproj"
+            "/Users/mathiasipedersen/Projects/ImdWeb2/DataServiceLib/DataServiceLib.csproj": {
+              "projectPath": "/Users/mathiasipedersen/Projects/ImdWeb2/DataServiceLib/DataServiceLib.csproj"
             }
           }
         }
@@ -5918,6 +5917,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
@@ -5954,7 +5954,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }
