@@ -51,6 +51,14 @@ namespace WebService.Controllers
 
         }
 
+        [HttpGet("name/{id}")]
+        public IActionResult getByName3(string id)
+        {
+            var result = _dataService.findingmovie(id);
+            return Ok(result);
+
+        }
+
         [HttpGet("structuredSearch/{id}")]
         public IActionResult getByName2(string id)
         {

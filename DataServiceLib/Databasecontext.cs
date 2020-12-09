@@ -32,6 +32,8 @@ namespace DataServiceLib
 
         public DbSet<structuredStringSearch> structuredStringSearch { get; set; }
 
+        public DbSet<findingmovie> findingmovie { get; set; }
+
         public DbSet<Title> title { get; set; }
        // public object SearchResults { get; internal set; }
 

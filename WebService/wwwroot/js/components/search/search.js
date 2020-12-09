@@ -13,6 +13,17 @@
                 .then(response => response.json())
                 .then(names);
 
+
+        };
+        let movies = ko.observableArray();
+        let id = ko.observable();
+        let getMovie = () => {
+            console.log('api/Titles/name/' + id());
+            fetch('api/Titles/name/' + id())
+                .then(response => response.json())
+                .then(movies);
+
+
         };
 
         //getNames();
@@ -23,7 +34,9 @@
             gotoContact,
             names,
             id,
-            getNames
+            getNames,
+            getMovie,
+            movies
         };
     }
 });

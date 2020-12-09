@@ -55,6 +55,20 @@ namespace DataServiceLib
 
         }
 
+        public object findingmovie(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<findingmovie> Search2(string arg)
+        {
+            var ctx = new Databasecontext();
+
+            var p = ctx.findingmovie.FromSqlInterpolated($"select * from findingmovie('Avengers({arg})");
+
+            return p.ToList();
+        }
+
         /*static void findingname(String[]args)
         {
             var connectionString = "host=localhost;db=imdb;uid=postgres;pwd=";
