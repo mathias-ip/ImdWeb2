@@ -51,10 +51,10 @@ namespace WebService.Controllers
 
         }
 
-        [HttpGet("name/{id}")]
+        [HttpGet("name/{id2}")]
         public IActionResult getByName3(string id)
         {
-            var result = _dataService.findingmovie(id);
+            var result = _dataService.Search2(id);
             return Ok(result);
 
         }

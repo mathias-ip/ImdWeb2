@@ -55,16 +55,13 @@ namespace DataServiceLib
 
         }
 
-        public object findingmovie(string id)
-        {
-            throw new NotImplementedException();
-        }
+       
 
-        public IList<findingmovie> Search2(string arg)
+        public IList<findingmovie> Search2(string arg6)
         {
             var ctx = new Databasecontext();
 
-            var p = ctx.findingmovie.FromSqlInterpolated($"select * from findingmovie('Avengers({arg})");
+            var p = ctx.findingmovie.FromSqlInterpolated($"select * from findingmovie({arg6})");
 
             return p.ToList();
         }

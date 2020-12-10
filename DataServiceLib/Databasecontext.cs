@@ -78,6 +78,10 @@ namespace DataServiceLib
             modelBuilder.Entity<bookmark>().Property(x => x.titleid).HasColumnName("titleid");
             modelBuilder.Entity<bookmark>().Property(x => x.nameid).HasColumnName("nameid");
 
+            modelBuilder.Entity<findingmovie>().HasNoKey();
+            modelBuilder.Entity<findingmovie>().Property(x => x.primarytitle).HasColumnName("primarytitle");
+            modelBuilder.Entity<findingmovie>().Property(x => x.originaltitle).HasColumnName("originaltitle");
+
             /*    modelBuilder.Entity<Product>().ToTable("products");
                 modelBuilder.Entity<Product>().Property(x => x.Id).HasColumnName("productid");
                // modelBuilder.Entity<Product>().Property(x => x.Name).HasColumnName("productname");

@@ -8,7 +8,6 @@
 
         let id = ko.observable();
         let getNames = () => {
-            console.log('api/Titles/search/' + id());
             fetch('api/Titles/search/' + id())
                 .then(response => response.json())
                 .then(names);
@@ -16,10 +15,13 @@
 
         };
         let movies = ko.observableArray();
-        let id = ko.observable();
+        let gotoContact2 = () => {
+            postman.publish("changeContent", "search2");
+        }
+
+        let id2 = ko.observable();
         let getMovie = () => {
-            console.log('api/Titles/name/' + id());
-            fetch('api/Titles/name/' + id())
+            fetch('api/Titles/name/' + id2())
                 .then(response => response.json())
                 .then(movies);
 
