@@ -57,11 +57,11 @@ namespace DataServiceLib
 
        
 
-        public IList<findingmovie> Search2(string arg6)
+        public IList<findingmovie> Search2(string arg)
         {
             var ctx = new Databasecontext();
 
-            var p = ctx.findingmovie.FromSqlInterpolated($"select * from findingmovie({arg6})");
+            var p = ctx.findingmovie.FromSqlInterpolated($"select * from findingmovie({arg})");
 
             return p.ToList();
         }

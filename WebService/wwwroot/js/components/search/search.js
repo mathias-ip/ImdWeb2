@@ -24,6 +24,7 @@
             fetch('api/Titles/name/' + id2())
                 .then(response => response.json())
                 .then(movies);
+            console.log("movie");
 
 
         };
@@ -38,7 +39,8 @@
             id,
             getNames,
             getMovie,
-            movies
+            movies,
+            id2
         };
     }
 });
