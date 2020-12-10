@@ -66,6 +66,15 @@ namespace DataServiceLib
             return p.ToList();
         }
 
+       /* public IList<createuser> Search2(string arg)
+        {
+            var ctx = new Databasecontext();
+
+            var p = ctx.createuser.FromSqlInterpolated($"select * from findingmovie({arg})");
+
+            return p.ToList();
+        }*/
+
         /*static void findingname(String[]args)
         {
             var connectionString = "host=localhost;db=imdb;uid=postgres;pwd=";
