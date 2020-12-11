@@ -10,10 +10,10 @@ using Npgsql;
 
 
 namespace DataServiceLib
-{ //test tesdt Mathias er god
+{ 
 
    
-    public class DataService //: IDataService
+    public class DataService 
     {
         private List<User> _users = testdata.Users;
 
@@ -66,30 +66,6 @@ namespace DataServiceLib
             return p.ToList();
         }
 
-       /* public IList<createuser> Search2(string arg)
-        {
-            var ctx = new Databasecontext();
-
-            var p = ctx.createuser.FromSqlInterpolated($"select * from findingmovie({arg})");
-
-            return p.ToList();
-        }*/
-
-        /*static void findingname(String[]args)
-        {
-            var connectionString = "host=localhost;db=imdb;uid=postgres;pwd=";
-            var connection = new NpgsqlConnection (connectionString);
-            connection.Open;
-
-            var cmd = NpgsqlCommand("select * from findingname('%joe%')", connection);
-
-            var reader = cmd.Executereader();
-
-            while (reader.read())
-            {
-
-                Console.WriteLine($"{reader.GetInt32()}");
-            }
-        }*/
+        
     }
 }

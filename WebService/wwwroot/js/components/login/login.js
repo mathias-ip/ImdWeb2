@@ -1,4 +1,4 @@
-﻿define(['postman'], (postman) => {
+﻿define(['postman', 'knockout'], (postman, ko) => {
     return function () {
 
         let gotoContact = () => {

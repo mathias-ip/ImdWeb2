@@ -15,7 +15,7 @@ namespace DataServiceLib
         
         public static readonly ILoggerFactory MyLoggerFactory
             = LoggerFactory.Create(builder => { builder.AddConsole(); });
-        //internal object structuredSearch;
+       
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -35,7 +35,7 @@ namespace DataServiceLib
         public DbSet<findingmovie> findingmovie { get; set; }
 
         public DbSet<Title> title { get; set; }
-       // public object SearchResults { get; internal set; }
+      
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {  
@@ -43,22 +43,7 @@ namespace DataServiceLib
             modelBuilder.Entity<Title>().Property(x => x.titleid).HasColumnName("titleid");
             modelBuilder.Entity<Title>().Property(x => x.primarytitle).HasColumnName("primarytitle");
             modelBuilder.Entity<Title>().Property(x => x.titletype).HasColumnName("titletype");
-           // modelBuilder.Entity<Title>().Property(x => x.orginaltitle).HasColumnName("orginaltitle");
-            /*modelBuilder.Entity<Title>().Property(x => x.type).HasColumnName("type");
-            modelBuilder.Entity<Title>().Property(x => x.isadult).HasColumnName("isadult");
-            modelBuilder.Entity<Title>().Property(x => x.startyear).HasColumnName("startyear");
-            modelBuilder.Entity<Title>().Property(x => x.endyear).HasColumnName("endyear");
-            modelBuilder.Entity<Title>().Property(x => x.runtime).HasColumnName("runtime");
-            modelBuilder.Entity<Title>().Property(x => x.awards).HasColumnName("awards");
-            modelBuilder.Entity<Title>().Property(x => x.poster).HasColumnName("poster");
-            modelBuilder.Entity<Title>().Property(x => x.plot).HasColumnName("plot");
-            */
-
-
-
-
-
-
+         
 
             modelBuilder.Entity<SearchResult>().HasNoKey();
             modelBuilder.Entity<SearchResult>().Property(x => x.primaryname).HasColumnName("primaryname");
@@ -82,25 +67,6 @@ namespace DataServiceLib
             modelBuilder.Entity<findingmovie>().Property(x => x.primarytitle).HasColumnName("primarytitle");
             modelBuilder.Entity<findingmovie>().Property(x => x.originaltitle).HasColumnName("originaltitle");
 
-            /*    modelBuilder.Entity<Product>().ToTable("products");
-                modelBuilder.Entity<Product>().Property(x => x.Id).HasColumnName("productid");
-               // modelBuilder.Entity<Product>().Property(x => x.Name).HasColumnName("productname");
-               // modelBuilder.Entity<Product>().Property(x => x.CategoryId).HasColumnName("categoryid");
-
-                modelBuilder.Entity<Orders>().ToTable("orders");
-                modelBuilder.Entity<Orders>().Property(x => x.Id).HasColumnName("orderid");
-                modelBuilder.Entity<Orders>().Property(x => x.orderdate).HasColumnName("orderdate");
-                modelBuilder.Entity<Orders>().Property(x => x.shipname).HasColumnName("shipname");
-                modelBuilder.Entity<Orders>().Property(x => x.shipcity).HasColumnName("shipcity");
-                // modelBuilder.Entity<Orders>().Property(x => x.date).HasColumnName("orderdate");
-                //modelBuilder.Entity<Category>().Property(x => x.Description).HasColumnName("description");
-             */
-
-            /*  modelBuilder.Entity<Orderdetails>().ToTable("orderdetails");
-              modelBuilder.Entity<Orderdetails>().Property(x => x.productid).HasColumnName("Íd");
-              modelBuilder.Entity<Orderdetails>().Property(x => x.productname).HasColumnName("productname");
-              modelBuilder.Entity<Orderdetails>().Property(x => x.unitprice).HasColumnName("unitprice");
-              modelBuilder.Entity<Orderdetails>().Property(x => x.quantity).HasColumnName("quantity"); */
         }
     }
 
