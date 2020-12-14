@@ -50,6 +50,7 @@ namespace WebService.Controllers
             return Ok(result);
 
         }
+        //test
 
         [HttpGet("name/{id2}")]
         public IActionResult getByName3(string id2)
