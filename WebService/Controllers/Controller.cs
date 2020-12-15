@@ -46,20 +46,39 @@ namespace WebService.Controllers
         [HttpGet("search/{id}")]
         public IActionResult getByName(string id)
         {
-            var result = _dataService.Search(id);
+            if (Program.CurrentUser == null)
+            {
+                return Unauthorized();
+            }
+            try
+            {
+                var result = _dataService.Search(id);
             return Ok(result);
-
+            }
+            catch (ArgumentException)
+            {
+                return Unauthorized();
+            }
         }
         //test
 
         [HttpGet("name/{id2}")]
         public IActionResult getByName3(string id2)
         {
-            var result = _dataService.Search2(id2);
+            if (Program.CurrentUser == null)
+            {
+                return Unauthorized();
+            }
+            try
+            {
+                var result = _dataService.Search2(id2);
             Console.WriteLine(result.Count());
             return Ok(result);
-           
-
+            }
+            catch (ArgumentException)
+            {
+                return Unauthorized();
+            }
         }
 
         [HttpGet("structuredSearch/{id}")]
