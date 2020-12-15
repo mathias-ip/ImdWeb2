@@ -20,7 +20,7 @@ namespace DataServiceLib
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLoggerFactory(MyLoggerFactory);
-            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=Jegersej19");
+            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=191191Ippe");
         }
 
         internal static object FromSql(string v)
@@ -66,6 +66,7 @@ namespace DataServiceLib
             modelBuilder.Entity<findingmovie>().HasNoKey();
             modelBuilder.Entity<findingmovie>().Property(x => x.primarytitle).HasColumnName("primarytitle");
             modelBuilder.Entity<findingmovie>().Property(x => x.originaltitle).HasColumnName("originaltitle");
+            modelBuilder.Entity<findingmovie>().Property(x => x.averagerating).HasColumnName("averagerating");
 
         }
     }
