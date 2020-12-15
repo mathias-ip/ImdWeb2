@@ -41,6 +41,7 @@
             id2
         };
     }
+    var moviesText = new Array('Primarytitle', 'Originaltitle', 'Averagerating');
 });
 
 

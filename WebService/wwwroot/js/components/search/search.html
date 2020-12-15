@@ -1,7 +1,7 @@
-﻿<input type="text" id="myInput" placeholder="Search for names.." data-bind="value:id">
+﻿<input type="text" id="myInput" placeholder="Search for names.." onfocus="this.placeholder=''" onblur="this.placeholder='Search for names..'" data-bind="value:id">
 <button data-bind="click:getNames">Search</button>
 
-<input type="text" id="myInput2" placeholder="Search for movies.." data-bind="value:id2">
+<input type="text" id="myInput" placeholder="Search for movies.." onfocus="this.placeholder=''"onblur="this.placeholder='Search for movies..'"  data-bind="value:id2">
 <button data-bind="click:getMovie">Search</button>
 
 <style>
@@ -15,7 +15,6 @@
         padding: 12px 20px 12px 40px; /* Add some padding */
         border: 1px solid #ddd; /* Add a grey border */
         margin-bottom: 12px; /* Add some space below the input */
-       
     }
 
     #myTable {
@@ -23,7 +22,6 @@
         width: 100%; /* Full-width */
         border: 1px solid #ddd; /* Add a grey border */
         font-size: 18px; /* Increase font-size */
-
     }
 
         #myTable th, #myTable td {
@@ -40,7 +38,6 @@
                 /* Add a grey background color to the table header and on hover */
                 background-color: #f1f1f1;
             }
-
 </style>
 
 
@@ -54,9 +51,10 @@
 
 </table>
 
-<table id="myTable" >
+<table id="myTable">
     <thead>
         <tr>
+
             <th>Primarytitle</th>
             <th>Originaltitle</th>
             <th>Averagerating</th>
