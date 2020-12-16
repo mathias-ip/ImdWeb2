@@ -35,7 +35,9 @@ namespace DataServiceLib
         public DbSet<findingmovie> findingmovie { get; set; }
 
         public DbSet<Title> title { get; set; }
-      
+
+        public DbSet<createuser> createuser { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {  
@@ -67,6 +69,11 @@ namespace DataServiceLib
             modelBuilder.Entity<findingmovie>().Property(x => x.primarytitle).HasColumnName("primarytitle");
             modelBuilder.Entity<findingmovie>().Property(x => x.originaltitle).HasColumnName("originaltitle");
             modelBuilder.Entity<findingmovie>().Property(x => x.averagerating).HasColumnName("averagerating");
+
+            modelBuilder.Entity<createuser>().HasNoKey();
+            modelBuilder.Entity<createuser>().Property(x => x.username).HasColumnName("username");
+            modelBuilder.Entity<createuser>().Property(x => x.password).HasColumnName("password");
+            modelBuilder.Entity<createuser>().Property(x => x.email).HasColumnName("email");
 
         }
     }

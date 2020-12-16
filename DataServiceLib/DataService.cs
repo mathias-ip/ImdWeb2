@@ -16,6 +16,7 @@ namespace DataServiceLib
     public class DataService 
     {
         private List<User> _users = testdata.Users;
+        private object _db;
 
         public IList<Title> Gettitle(int id)
 
@@ -64,6 +65,15 @@ namespace DataServiceLib
             var p = ctx.findingmovie.FromSqlInterpolated($"select * from findingmovie({arg})");
 
             return p.ToList();
+        }
+
+
+        public void Createuser(User user)
+        {
+            var ctx = new Databasecontext();
+            ctx.Database.ExecuteSqlInterpolated($"select createUser({user.username},{user.password},{user.email})");
+           
+
         }
 
         

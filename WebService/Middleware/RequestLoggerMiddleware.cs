@@ -47,7 +47,7 @@ namespace WebService.Middleware
             await request.Body.ReadAsync(buffer, 0, buffer.Length);
             var bodyAsText = Encoding.UTF8.GetString(buffer);
 
-            request.Body = body;
+            request.Body.Position = 0;
 
             return $"{request.Scheme} {request.Host}{request.Path} {request.QueryString} {bodyAsText}";
         }

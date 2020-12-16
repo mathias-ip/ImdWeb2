@@ -23,63 +23,71 @@ namespace WebService.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
-        public IActionResult GetTitles()
-        {
-            if (Program.CurrentUser == null)
+            [HttpGet]
+            public IActionResult GetTitles()
             {
-                return Unauthorized();
-            }
-            try
-            {
-                var title = _dataService.Gettitle(Program.CurrentUser.userid);
+                if (Program.CurrentUser == null)
+                {
+                    return Unauthorized();
+                }
+                try
+                {
+                    var title = _dataService.Gettitle(Program.CurrentUser.userid);
 
-                return Ok(_mapper.Map<IEnumerable<TitleDto>>(title));
-            }
-            catch (ArgumentException)
-            {
-                return Unauthorized();
+                    return Ok(_mapper.Map<IEnumerable<TitleDto>>(title));
+                }
+                catch (ArgumentException)
+                {
+                    return Unauthorized();
+                }
+
             }
 
-        }
+            [HttpGet("search/{id}")]
+            public IActionResult getByName(string id)
+            {
+                if (Program.CurrentUser == null)
+                {
+                    return Unauthorized();
+                }
+                try
+                {
+                    var result = _dataService.Search(id);
+                    return Ok(result);
+                }
+                catch (ArgumentException)
+                {
+                    return Unauthorized();
+                }
+            }
 
-        [HttpGet("search/{id}")]
-        public IActionResult getByName(string id)
-        {
-            if (Program.CurrentUser == null)
-            {
-                return Unauthorized();
-            }
-            try
-            {
-                var result = _dataService.Search(id);
-            return Ok(result);
-            }
-            catch (ArgumentException)
-            {
-                return Unauthorized();
-            }
-        }
-     
 
-        [HttpGet("name/{id2}")]
-        public IActionResult getByName3(string id2)
-        {
-           
+            [HttpGet("name/{id2}")]
+            public IActionResult getByName3(string id2)
+            {
+
                 var result = _dataService.Search2(id2);
-            Console.WriteLine(result.Count());
-            return Ok(result);
-           
+                Console.WriteLine(result.Count());
+                return Ok(result);
+
+            }
+
+            [HttpGet("structuredSearch/{id}")]
+            public IActionResult getByName2(string id)
+            {
+                var result = _dataService.StringSearch("", "see", "", "Mads Mikkelsen", "123");
+                return Ok(result);
+
+            }
+
+            [HttpPost("CreateUser")]
+            public IActionResult createUsers(UserCreationDto userCreationDto)
+            {
+                var user = _mapper.Map<User>(userCreationDto);
+                _dataService.Createuser(user);
+            return Ok();
+            }
+
+
         }
-
-        [HttpGet("structuredSearch/{id}")]
-        public IActionResult getByName2(string id)
-        {
-            var result = _dataService.StringSearch("", "see", "", "Mads Mikkelsen", "123");
-            return Ok(result);
-
-        }
-
-     
-    }
-}
+    } 
