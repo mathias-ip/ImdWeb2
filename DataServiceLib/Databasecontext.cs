@@ -15,7 +15,7 @@ namespace DataServiceLib
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLoggerFactory(MyLoggerFactory);
-            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=Jegersej19"); //Indtaster host, databasenavn, brugernavn og password
+            optionsBuilder.UseNpgsql("host=rawdata.ruc.dk;db=raw6;uid=raw6;pwd=eZojEru-"); //Indtaster host, databasenavn, brugernavn og password
         }
 
         internal static object FromSql(string v)
