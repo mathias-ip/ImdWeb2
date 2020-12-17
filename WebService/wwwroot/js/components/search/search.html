@@ -1,8 +1,8 @@
 ﻿<input type="text" id="myInput" placeholder="Search for names.." onfocus="this.placeholder=''" onblur="this.placeholder='Search for names..'" data-bind="value:id">
-<button data-bind="click:getNames">Search</button>
+<button data-bind="click:searchName">Search</button>
 
 <input type="text" id="myInput" placeholder="Search for movies.." onfocus="this.placeholder=''"onblur="this.placeholder='Search for movies..'"  data-bind="value:id2">
-<button data-bind="click:getMovie">Search</button>
+<button data-bind="click:searchMovie">Search</button>
 
 <style>
     <h1 > Hej </h1 >
@@ -41,30 +41,49 @@
 </style>
 
 
+<div>
 
-<table id="myTable" data-bind="foreach: names">
+    <div>
+        Page size: <select data-bind="options: pageSizes, selectedOptions: selectedPageSize"></select>
+    </div>
+    <table id="myTable" data-bind="ifnot: movieSearch">
 
-    <tr>
-        <td data-bind="text: primaryname">Unauthorized</td>
-        <td data-bind="text: category">Unauthorized</td>
+        <thead>
+            <tr>
+                <th>Primaryname</th>
+                <th>category</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: names">
+            <tr>
+                <td data-bind="text: primaryname">Unauthorized</td>
+                <td data-bind="text: category">Unauthorized</td>
 
 
-</table>
+    </table>
 
-<table id="myTable">
-    <thead>
-        <tr>
+    <table id="myTable" data-bind="if: movieSearch">
+        <thead>
+            <tr>
 
-            <th>Primarytitle</th>
-            <th>Originaltitle</th>
-            <th>Averagerating</th>
-        </tr>
-    </thead>
-    <tbody data-bind="foreach: movies">
-        <tr>
-            <td data-bind="text: primarytitle">Unauthorized</td>
-            <td data-bind="text: originaltitle">Unauthorized</td>
-            <td data-bind="text: averagerating">Unauthorized</td>
-        </tr>
-    </tbody>
-</table>
+                <th>Primarytitle</th>
+                <th>Originaltitle</th>
+                <th>Averagerating</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: movies">
+            <tr>
+                <td data-bind="text: primarytitle">Unauthorized</td>
+                <td data-bind="text: originaltitle">Unauthorized</td>
+                <td data-bind="text: averagerating">Unauthorized</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="navigation-buttons">
+        <button data-bind="click: showPrev, enable: enablePrev">Prev</button>
+        <button data-bind="click: showNext, enable: enableNext">Next</button>
+    </div>
+
+
+</div>

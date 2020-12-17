@@ -20,7 +20,7 @@ namespace DataServiceLib
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLoggerFactory(MyLoggerFactory);
-            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=191191Ippe");
+            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=wqm97rcn");
         }
 
         internal static object FromSql(string v)
@@ -28,7 +28,8 @@ namespace DataServiceLib
             throw new NotImplementedException();
         }
 
-        public DbSet<SearchResult> SearchResults { get; set; }
+        public DbSet<NameSearchResult> NameSearchResult { get; set; }
+        public DbSet<MovieSearchResult> MovieSearchResult { get; set; }
 
         public DbSet<structuredStringSearch> structuredStringSearch { get; set; }
 
@@ -47,10 +48,14 @@ namespace DataServiceLib
             modelBuilder.Entity<Title>().Property(x => x.titletype).HasColumnName("titletype");
          
 
-            modelBuilder.Entity<SearchResult>().HasNoKey();
-            modelBuilder.Entity<SearchResult>().Property(x => x.name).HasColumnName("name");
-            modelBuilder.Entity<SearchResult>().Property(x => x.category).HasColumnName("category");
+            modelBuilder.Entity<NameSearchResult>().HasNoKey();
+            modelBuilder.Entity<NameSearchResult>().Property(x => x.primaryname).HasColumnName("primaryname");
+            modelBuilder.Entity<NameSearchResult>().Property(x => x.category).HasColumnName("category");
 
+            modelBuilder.Entity<MovieSearchResult>().HasNoKey();
+            modelBuilder.Entity<MovieSearchResult>().Property(x => x.primarytitle).HasColumnName("primarytitle");
+            modelBuilder.Entity<MovieSearchResult>().Property(x => x.originaltitle).HasColumnName("originaltitle");
+            modelBuilder.Entity<MovieSearchResult>().Property(x => x.averagerating).HasColumnName("averagerating");
 
             modelBuilder.Entity<structuredStringSearch>().HasNoKey();
             modelBuilder.Entity<structuredStringSearch>().Property(x => x.primarytitle).HasColumnName("primarytitle");

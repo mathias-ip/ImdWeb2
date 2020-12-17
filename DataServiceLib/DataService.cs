@@ -37,11 +37,11 @@ namespace DataServiceLib
             return _users.FirstOrDefault(x => x.userid == id);
         }
 
-        public IList<SearchResult> SearchName(string arg, int page, int pageSize)
+        public IList<NameSearchResult> SearchName(string arg, int page, int pageSize)
         {
             var ctx = new Databasecontext();
             Console.WriteLine(arg);
-            return ctx.SearchResults.FromSqlInterpolated($"select * from findingname({arg.ToLower()})")
+            return ctx.NameSearchResult.FromSqlInterpolated($"select * from findingname({arg.ToLower()})")
             .Skip(page * pageSize)
             .Take(pageSize)
             .ToList();
@@ -58,11 +58,11 @@ namespace DataServiceLib
 
         }
 
-        public IList<SearchResult> SearchMovie(string arg, int page, int pageSize)
+        public IList<MovieSearchResult> SearchMovie(string arg, int page, int pageSize)
         {
             var ctx = new Databasecontext();
             Console.WriteLine(arg);
-            return ctx.SearchResults.FromSqlInterpolated($"select * from findingmovie({arg.ToLower()})")
+            return ctx.MovieSearchResult.FromSqlInterpolated($"select * from findingmovie({arg.ToLower()})")
             .Skip(page * pageSize)
             .Take(pageSize)
             .ToList();
