@@ -1,6 +1,6 @@
 ﻿namespace DataServiceLib
 {
-    public class bookmark
+    public class bookmark // Henter bookmarks
     {
         public string userid { get; set; }
         public string titleid { get; set; }

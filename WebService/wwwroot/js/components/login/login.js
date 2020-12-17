@@ -25,26 +25,8 @@
 
             });
 
-<<<<<<< Updated upstream
-            /*  ds.createUser(user, (newUser) => {
-                  if (newUser == undefined) {
-                      alert('not correctly signed in');
-                      username('');
-                      password('');
-                      email('');
-                  }
-  
-                  else {
-                      alert('you are signed in')
-                      vm.changeContent('Search');
-  
-                  }
-  
-              });*/
-=======
-          
 
->>>>>>> Stashed changes
+ 
         };
 
         return {

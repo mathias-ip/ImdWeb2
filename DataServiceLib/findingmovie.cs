@@ -1,6 +1,6 @@
 ﻿namespace DataServiceLib
 {
-    public class findingmovie
+    public class findingmovie //Henter titler og bedømmelser fra film
     {
         public string primarytitle { get; set; }
         public string originaltitle { get; set; }

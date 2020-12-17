@@ -7,15 +7,18 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'IIS Express' " />
 
   <ItemGroup>
+    <Compile Remove="View\**" />
+    <Content Remove="View\**" />
+    <EmbeddedResource Remove="View\**" />
+    <None Remove="View\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\css\Style.css" />
     <Content Remove="wwwroot\js\components\home\home.js" />
     <Content Remove="wwwroot\js\components\login\login.js" />
     <Content Remove="wwwroot\js\components\profile\profile.js" />
     <Content Remove="wwwroot\js\components\search\search.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="View\Index.html" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,9 +66,5 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="View\" />
   </ItemGroup>
 </Project>

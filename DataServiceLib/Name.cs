@@ -1,8 +1,8 @@
 ﻿
 namespace DataServiceLib
-{
+{ 
     class Name
-    {
+    { /*
         public string nameid { get; set; }
 
         public string primaryname { get; set; }
@@ -19,7 +19,7 @@ namespace DataServiceLib
             return $"nameid = {nameid}, ´primaryname = {primaryname}, nametype = {nametype}," +
                 $" deathyear = {deathyear}, birthyear = {birthyear}";
 
-        }
+       } */
 
     }
 }

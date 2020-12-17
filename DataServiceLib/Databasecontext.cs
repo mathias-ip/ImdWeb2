@@ -8,21 +8,21 @@ namespace DataServiceLib
     public class Databasecontext : DbContext
     {
         
-        public static readonly ILoggerFactory MyLoggerFactory
+        public static readonly ILoggerFactory MyLoggerFactory //Tilføjer konsol
             = LoggerFactory.Create(builder => { builder.AddConsole(); });
        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLoggerFactory(MyLoggerFactory);
-            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=191191Ippe");
+            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=Jegersej19"); //Indtaster host, databasenavn, brugernavn og password
         }
 
         internal static object FromSql(string v)
         {
             throw new NotImplementedException();
         }
-
+         //Henter funktioner fra databasen
         public DbSet<NameSearchResult> NameSearchResult { get; set; }
         public DbSet<MovieSearchResult> MovieSearchResult { get; set; }
 
@@ -31,6 +31,7 @@ namespace DataServiceLib
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         { 
+            //henter værdier fra databasen
             modelBuilder.Entity<NameSearchResult>().HasNoKey();
             modelBuilder.Entity<NameSearchResult>().Property(x => x.primaryname).HasColumnName("primaryname");
             modelBuilder.Entity<NameSearchResult>().Property(x => x.category).HasColumnName("category");

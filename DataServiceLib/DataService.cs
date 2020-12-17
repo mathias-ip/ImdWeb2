@@ -9,11 +9,11 @@ namespace DataServiceLib
 { 
 
    
-    public class DataService 
+    public class DataService //indholder data og funktioner
     {
-        private List<User> _users = testdata.Users;
+        private List<User> _users = testdata.Users; //Henter dummy data til authorization
 
-        public User GetUser(string username)
+        public User GetUser(string username) // Current user, hentet fra dummy data
         {
 
             return _users.FirstOrDefault(x => x.username == username);
@@ -25,7 +25,7 @@ namespace DataServiceLib
             return _users.FirstOrDefault(x => x.userid == id);
         }
 
-        public IList<NameSearchResult> SearchName(string arg, int page, int pageSize)
+        public IList<NameSearchResult> SearchName(string arg, int page, int pageSize) //Laver search name, ved at hente i database context
         {
             var ctx = new Databasecontext();
             Console.WriteLine(arg);
@@ -38,7 +38,7 @@ namespace DataServiceLib
 
 
 
-        public IList<MovieSearchResult> SearchMovie(string arg, int page, int pageSize)
+        public IList<MovieSearchResult> SearchMovie(string arg, int page, int pageSize) //Søger search movie, ved at hente fra database context
         {
             var ctx = new Databasecontext();
             Console.WriteLine(arg);
@@ -48,7 +48,7 @@ namespace DataServiceLib
             .ToList();
         }
 
-        public int GetSearchMovieCount(string arg)
+        public int GetSearchMovieCount(string arg) //Movie tæller, som  holder styr på mængden af film som der bliver hentet fra listen
         {
             var ctx = new Databasecontext();
             var cmd = ctx.Database.GetDbConnection().CreateCommand();
@@ -59,7 +59,7 @@ namespace DataServiceLib
 
         }
 
-        public int GetSearchNameCount(string arg)
+        public int GetSearchNameCount(string arg) //Navne tæller, som holder styr på mængden af film som der bliver hentet fra listen
         {
             var ctx = new Databasecontext();
             var cmd = ctx.Database.GetDbConnection().CreateCommand();
@@ -71,7 +71,7 @@ namespace DataServiceLib
         }
 
 
-        public void Createuser(User user)
+        public void Createuser(User user) //indsætter brugernavn, password og email i databasen under "user"
         {
             var ctx = new Databasecontext();
             ctx.Database.ExecuteSqlInterpolated($"select createUser({user.username},{user.password},{user.email})");
