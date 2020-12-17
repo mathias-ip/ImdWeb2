@@ -40,8 +40,8 @@ namespace WebService.Controllers
 
             }
 
-        [HttpGet("search/{arg}", Name = nameof(GetByName))]
-        public IActionResult GetByName(string arg, int page = 0, int pageSize = 10)
+        [HttpGet("search/{arg}", Name = nameof(GetByMovie))]
+        public IActionResult GetByMovie(string arg, int page = 0, int pageSize = 10)
         {
 
             var searchitems = _dataService.SearchMovie(arg, page, pageSize);
@@ -50,13 +50,13 @@ namespace WebService.Controllers
             var prev = (string)null;
             if (page > 0)
             {
-                prev = Url.Link(nameof(GetByName), new { arg, page = page - 1, pageSize });
+                prev = Url.Link(nameof(GetByMovie), new { arg, page = page - 1, pageSize });
             }
 
             var next = (string)null;
             if (page < pages - 1)
             {
-                next = Url.Link(nameof(GetByName), new { arg, page = page + 1, pageSize });
+                next = Url.Link(nameof(GetByMovie), new { arg, page = page + 1, pageSize });
                 Console.WriteLine(next);
             }
 
@@ -77,8 +77,8 @@ namespace WebService.Controllers
 
 
 
-        [HttpGet("name/{arg}", Name = nameof(GetByName3))]
-        public IActionResult GetByName3(string arg, int page = 0, int pageSize = 10)
+        [HttpGet("name/{arg}", Name = nameof(GetByName))]
+        public IActionResult GetByName(string arg, int page = 0, int pageSize = 10)
         {
             var searchitems = _dataService.SearchName(arg, page, pageSize);
             var numberOfMovies = _dataService.GetSearchNameCount(arg);
@@ -86,13 +86,13 @@ namespace WebService.Controllers
             var prev = (string)null;
             if (page > 0)
             {
-                prev = Url.Link(nameof(GetByName3), new { arg, page = page - 1, pageSize });
+                prev = Url.Link(nameof(GetByName), new { arg, page = page - 1, pageSize });
             }
 
             var next = (string)null;
             if (page < pages - 1)
             {
-                next = Url.Link(nameof(GetByName3), new { arg, page = page + 1, pageSize });
+                next = Url.Link(nameof(GetByName), new { arg, page = page + 1, pageSize });
                 Console.WriteLine(next);
             }
 
