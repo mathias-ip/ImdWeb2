@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WebService.Middleware
 {
-    public static class RequestLoggerMiddlewareExtension
+    public static class RequestLoggerMiddlewareExtension //logger kode
     {
         public static IApplicationBuilder UseRequestLogging(this IApplicationBuilder builder)
         {

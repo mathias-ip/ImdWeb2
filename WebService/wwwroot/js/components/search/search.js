@@ -10,9 +10,9 @@
             postman.publish("changeContent", "search");
         }
 
-        let nameId = ko.observable();
+        let nameId = ko.observable(); //
         let getNames = () => {
-            fetch('api/Titles/search/' + nameId())
+            fetch('search/search/' + nameId())
                 .then(response => response.json())
                 .then(names);
 

@@ -1,7 +1,7 @@
 ﻿
 define([], () => {
-    const movieApiUrl = "api/Titles/search/";
-    const nameApiUrl = "api/Titles/name/";
+    const movieApiUrl = "search/search/";
+    const nameApiUrl = "search/name/";
     let getJson = (url, callback) => {
 
         fetch(url).then(response => response.json()).then(callback);

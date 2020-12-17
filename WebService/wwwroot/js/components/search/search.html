@@ -1,4 +1,4 @@
-﻿<input type="text" id="myInput" placeholder="Search for names.." data-bind="value:nameId">
+﻿<input type="text" id="myInput" placeholder="Search for names.." data-bind="value:nameId"> 
 <button data-bind="click:searchName">Search</button>
 
 <input type="text" id="myInput" placeholder="Search for movies.."  data-bind="value:movieId">
@@ -46,12 +46,12 @@
     <div>
         Page size: <select data-bind="options: pageSizes, selectedOptions: selectedPageSize"></select>
     </div>
-    <table id="myTable" data-bind="ifnot: movieSearch">
+    <table id="myTable" data-bind="ifnot: movieSearch">     <!--Hvis det IKKE er moviesearch, gør følgende::-->
 
         <thead>
             <tr>
-                <th>Primaryname</th>
-                <th>category</th>
+                <th>Name</th>
+                <th>Role</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: names">
@@ -62,13 +62,13 @@
 
     </table>
 
-    <table id="myTable" data-bind="if: movieSearch">
+    <table id="myTable" data-bind="if: movieSearch">   
         <thead>
-            <tr>
+            <tr>     <!--indsættes hvis det er en film -->
 
-                <th>Primarytitle</th>
-                <th>Originaltitle</th>
-                <th>Averagerating</th>
+                <th>Title</th>
+                <th>Original title</th>
+                <th>Average rating</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: movies">

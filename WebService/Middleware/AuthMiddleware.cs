@@ -21,7 +21,7 @@ namespace WebService.Middleware
     {
         private readonly RequestDelegate _next;
         private readonly DataService _dataService;
-
+        //henter dataservice
         public AuthMiddleware(RequestDelegate next, DataService dataService)
         {
             _next = next;
@@ -32,7 +32,7 @@ namespace WebService.Middleware
         {
             Program.CurrentUser = null;
 
-
+            //Henter header string og tjekker om navnet er i dummy dataen
             var auth = context.Request.Headers["Authorization"].ToString();
             // auth = "testing";
             Console.WriteLine("!");
@@ -43,7 +43,6 @@ namespace WebService.Middleware
 
                 Console.WriteLine("Finding users");
             }
-            //hej
             await _next(context);
         }
     }

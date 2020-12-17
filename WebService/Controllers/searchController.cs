@@ -8,13 +8,13 @@ using WebService.Models;
 namespace WebService.Controllers
 {
     [ApiController]
-    [Route("api/Titles")]
-    public class Controller : ControllerBase
+    [Route("Search")]
+    public class searchController : ControllerBase //Controller til søgefunktionen
     {
         DataService _dataService;
         private readonly IMapper _mapper;
 
-        public Controller(DataService dataService, IMapper mapper)
+        public searchController(DataService dataService, IMapper mapper) //Mapper dataservice laget til brug af auth testing
         {
             _dataService = dataService;
             _mapper = mapper;
@@ -25,20 +25,20 @@ namespace WebService.Controllers
         [HttpGet("search/{arg}", Name = nameof(GetByMovie))]
         public IActionResult GetByMovie(string arg, int page = 0, int pageSize = 10)
         {
-
+            //Henter data fra dataservice til brug i film
             var searchitems = _dataService.SearchMovie(arg, page, pageSize);
             var numberOfMovies = _dataService.GetSearchMovieCount(arg);
-            var pages = (int)Math.Ceiling((double)numberOfMovies / pageSize);
+            var pages = (int)Math.Ceiling((double)numberOfMovies / pageSize); //henter film og indsætter side størrelse ud for mængden af film
             var prev = (string)null;
             if (page > 0)
             {
-                prev = Url.Link(nameof(GetByMovie), new { arg, page = page - 1, pageSize });
+                prev = Url.Link(nameof(GetByMovie), new { arg, page = page - 1, pageSize }); //Side skift, tilbage
             }
 
             var next = (string)null;
             if (page < pages - 1)
             {
-                next = Url.Link(nameof(GetByMovie), new { arg, page = page + 1, pageSize });
+                next = Url.Link(nameof(GetByMovie), new { arg, page = page + 1, pageSize }); //Side skift, frem
                 Console.WriteLine(next);
             }
 
@@ -59,8 +59,8 @@ namespace WebService.Controllers
 
 
 
-        [HttpGet("name/{arg}", Name = nameof(GetByName))]
-        public IActionResult GetByName(string arg, int page = 0, int pageSize = 10)
+        [HttpGet("name/{arg}", Name = nameof(GetByName))] 
+        public IActionResult GetByName(string arg, int page = 0, int pageSize = 10) // Henter sider for navne
         {
             var searchitems = _dataService.SearchName(arg, page, pageSize);
             var numberOfMovies = _dataService.GetSearchNameCount(arg);
@@ -91,16 +91,5 @@ namespace WebService.Controllers
             return Ok(result);
 
         }
-
-
-        [HttpPost("CreateUser")]
-            public IActionResult createUsers(UserCreationDto userCreationDto)
-            {
-                var user = _mapper.Map<User>(userCreationDto);
-                _dataService.Createuser(user);
-            return Ok();
-            }
-
-
         }
     } 
