@@ -31,8 +31,6 @@ namespace DataServiceLib
         public DbSet<NameSearchResult> NameSearchResult { get; set; }
         public DbSet<MovieSearchResult> MovieSearchResult { get; set; }
 
-        public DbSet<structuredStringSearch> structuredStringSearch { get; set; }
-
         public DbSet<findingmovie> findingmovie { get; set; }
 
         public DbSet<Title> title { get; set; }
@@ -56,14 +54,6 @@ namespace DataServiceLib
             modelBuilder.Entity<MovieSearchResult>().Property(x => x.primarytitle).HasColumnName("primarytitle");
             modelBuilder.Entity<MovieSearchResult>().Property(x => x.originaltitle).HasColumnName("originaltitle");
             modelBuilder.Entity<MovieSearchResult>().Property(x => x.averagerating).HasColumnName("averagerating");
-
-            modelBuilder.Entity<structuredStringSearch>().HasNoKey();
-            modelBuilder.Entity<structuredStringSearch>().Property(x => x.primarytitle).HasColumnName("primarytitle");
-            modelBuilder.Entity<structuredStringSearch>().Property(x => x.plot).HasColumnName("plot");
-            modelBuilder.Entity<structuredStringSearch>().Property(x => x.characters).HasColumnName("characters");
-            modelBuilder.Entity<structuredStringSearch>().Property(x => x.primaryname).HasColumnName("primaryname");
-            modelBuilder.Entity<structuredStringSearch>().Property(x => x.userid).HasColumnName("userid");
-
 
             modelBuilder.Entity<bookmark>().HasNoKey();
             modelBuilder.Entity<bookmark>().Property(x => x.userid).HasColumnName("userid");
