@@ -52,16 +52,28 @@
 
         //let paging beging with previes side
         let showPrev = movies => {
-            console.log(prev());
-            getMovie(prev());
+            if (movieSearch()) {
+                getMovie(prev());
+            }
+            else {
+                getName(prev());
+            }
+        
         }
 
         let enablePrev = ko.computed(() => prev() !== undefined);
 
         //let paging beging with next side 
         let showNext = movies => {
+            if (movieSearch()) {
+                getMovie(next());
+            }
+            else
+            {
+                getName(next());
+            }
             console.log(next());
-            getMovie(next());
+           
         }
 
         let enableNext = ko.computed(() => next() !== undefined);
