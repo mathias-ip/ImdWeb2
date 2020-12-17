@@ -3,7 +3,7 @@
 namespace DataServiceLib
 {
 
-    class testdata
+    class testdata //Test bruger til at teste authorization med
     {
         public static List<User> Users { get; set; }
         static testdata()

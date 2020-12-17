@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataServiceLib
+namespace DataServiceLib //Test af authorization
 {
     class Program
     {

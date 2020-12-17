@@ -1,7 +1,7 @@
 ﻿using System;
 using DataServiceLib;
 
-namespace TestafDataservice
+namespace TestafDataservice //Gammel test af dataservice for at se om det var muligt at udtrække date fra SQL databasen
 {
     class Program
     {

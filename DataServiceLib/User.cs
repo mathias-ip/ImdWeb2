@@ -2,7 +2,7 @@
 namespace DataServiceLib
 {
 
-    public class User
+    public class User //henter bruger data
     {
         public int userid { get; set; }
         public string username { get; set; }

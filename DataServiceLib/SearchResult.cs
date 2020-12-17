@@ -1,6 +1,6 @@
 ﻿namespace DataServiceLib
 {
-    public class MovieSearchResult
+    public class MovieSearchResult //Henter titler og bedømmelser
     {
 
 
@@ -9,7 +9,7 @@
         public float averagerating { get; set; }
     }
 
-    public class NameSearchResult
+    public class NameSearchResult //Henter navn og roller
     {
 
 
