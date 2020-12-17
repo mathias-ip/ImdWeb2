@@ -16,15 +16,7 @@ namespace DataServiceLib
     public class DataService 
     {
         private List<User> _users = testdata.Users;
-        private object _db;
 
-        public IList<Title> Gettitle(int id)
-
-        {
-            var ctx = new Databasecontext();
-            ctx.SaveChanges();
-            return ctx.title.ToList();
-        }
         public User GetUser(string username)
         {
 
@@ -81,16 +73,6 @@ namespace DataServiceLib
 
 
         }
-
-
-        /* public IList<findingmovie> Search2(string arg)
-          {
-              var ctx = new Databasecontext();
-
-              var p = ctx.findingmovie.FromSqlInterpolated($"select * from findingmovie({arg})");
-
-              return p.ToList();
-          }*/
 
 
         public void Createuser(User user)

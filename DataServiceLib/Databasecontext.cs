@@ -33,19 +33,11 @@ namespace DataServiceLib
 
         public DbSet<findingmovie> findingmovie { get; set; }
 
-        public DbSet<Title> title { get; set; }
-
         public DbSet<createuser> createuser { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {  
-            modelBuilder.Entity<Title>().ToTable("title");
-            modelBuilder.Entity<Title>().Property(x => x.titleid).HasColumnName("titleid");
-            modelBuilder.Entity<Title>().Property(x => x.primarytitle).HasColumnName("primarytitle");
-            modelBuilder.Entity<Title>().Property(x => x.titletype).HasColumnName("titletype");
-         
-
+        { 
             modelBuilder.Entity<NameSearchResult>().HasNoKey();
             modelBuilder.Entity<NameSearchResult>().Property(x => x.primaryname).HasColumnName("primaryname");
             modelBuilder.Entity<NameSearchResult>().Property(x => x.category).HasColumnName("category");
