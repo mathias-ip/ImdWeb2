@@ -13,10 +13,6 @@ namespace DataServiceLib
         {
 
             var dataService = new DataService();
-       /*     foreach (var elem in dataService.Gettitle())
-            {
-                Console.WriteLine(elem);
-            } */
         }
     }
 }

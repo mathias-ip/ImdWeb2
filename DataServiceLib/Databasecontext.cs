@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
@@ -31,8 +26,6 @@ namespace DataServiceLib
         public DbSet<NameSearchResult> NameSearchResult { get; set; }
         public DbSet<MovieSearchResult> MovieSearchResult { get; set; }
 
-        public DbSet<findingmovie> findingmovie { get; set; }
-
         public DbSet<createuser> createuser { get; set; }
 
 
@@ -51,11 +44,6 @@ namespace DataServiceLib
             modelBuilder.Entity<bookmark>().Property(x => x.userid).HasColumnName("userid");
             modelBuilder.Entity<bookmark>().Property(x => x.titleid).HasColumnName("titleid");
             modelBuilder.Entity<bookmark>().Property(x => x.nameid).HasColumnName("nameid");
-
-            modelBuilder.Entity<findingmovie>().HasNoKey();
-            modelBuilder.Entity<findingmovie>().Property(x => x.primarytitle).HasColumnName("primarytitle");
-            modelBuilder.Entity<findingmovie>().Property(x => x.originaltitle).HasColumnName("originaltitle");
-            modelBuilder.Entity<findingmovie>().Property(x => x.averagerating).HasColumnName("averagerating");
 
             modelBuilder.Entity<createuser>().HasNoKey();
             modelBuilder.Entity<createuser>().Property(x => x.username).HasColumnName("username");
