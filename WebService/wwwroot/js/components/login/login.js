@@ -25,6 +25,7 @@
 
             });
 
+<<<<<<< Updated upstream
             /*  ds.createUser(user, (newUser) => {
                   if (newUser == undefined) {
                       alert('not correctly signed in');
@@ -40,6 +41,10 @@
                   }
   
               });*/
+=======
+          
+
+>>>>>>> Stashed changes
         };
 
         return {

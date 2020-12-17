@@ -8,12 +8,5 @@ using DataServiceLib;
 
 namespace WebService.Models.Profiles
 {
-    public class TitleProfile : Profile
-    {
-        public TitleProfile()
-        {
-            CreateMap<Title, TitleDto>();
-           // CreateMap<CategoryForCreationOrUpdateDto, Category>();
-        }
-    }
+   
 }

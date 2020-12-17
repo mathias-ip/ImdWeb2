@@ -20,25 +20,7 @@ namespace WebService.Controllers
             _mapper = mapper;
         }
 
-            [HttpGet]
-            public IActionResult GetTitles()
-            {
-                if (Program.CurrentUser == null)
-                {
-                    return Unauthorized();
-                }
-                try
-                {
-                    var title = _dataService.Gettitle(Program.CurrentUser.userid);
-
-                    return Ok(_mapper.Map<IEnumerable<TitleDto>>(title));
-                }
-                catch (ArgumentException)
-                {
-                    return Unauthorized();
-                }
-
-            }
+        
 
         [HttpGet("search/{arg}", Name = nameof(GetByMovie))]
         public IActionResult GetByMovie(string arg, int page = 0, int pageSize = 10)
