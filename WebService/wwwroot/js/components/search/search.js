@@ -10,14 +10,14 @@
             postman.publish("changeContent", "search");
         }
 
-        let nameId = ko.observable(); //
+        let nameId = ko.observable(); //Henter navn for en specifik sti
         let getNames = () => {
             fetch('search/search/' + nameId())
                 .then(response => response.json())
                 .then(names);
 
         };
-        let movies = ko.observableArray();
+        let movies = ko.observableArray(); //Henter film streng fra sti
         let gotoContact2 = () => {
             postman.publish("changeContent", "search2");
         }
@@ -50,7 +50,7 @@
         let searchMovie = () => getMovie();
         let searchName = () => getName();
 
-        //let paging beging with previes side
+        //Henter forrige side
         let showPrev = movies => {
             if (movieSearch()) {
                 getMovie(prev());
@@ -63,7 +63,7 @@
 
         let enablePrev = ko.computed(() => prev() !== undefined);
 
-        //let paging beging with next side 
+        //Hent næste side
         let showNext = movies => {
             if (movieSearch()) {
                 getMovie(next());
@@ -90,7 +90,7 @@
             }
         });
         
-
+        //return værdier
         return {
             gotoContact,
             names,

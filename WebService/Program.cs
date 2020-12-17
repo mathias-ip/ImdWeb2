@@ -13,7 +13,7 @@ namespace WebService
     public class Program
     {
 
-        public static User CurrentUser = null;
+        public static User CurrentUser = null; //Sætter bruger til null, kan hente en igennem authorization
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
