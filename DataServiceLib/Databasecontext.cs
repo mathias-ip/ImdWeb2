@@ -48,7 +48,7 @@ namespace DataServiceLib
          
 
             modelBuilder.Entity<SearchResult>().HasNoKey();
-            modelBuilder.Entity<SearchResult>().Property(x => x.primaryname).HasColumnName("primaryname");
+            modelBuilder.Entity<SearchResult>().Property(x => x.name).HasColumnName("name");
             modelBuilder.Entity<SearchResult>().Property(x => x.category).HasColumnName("category");
 
 

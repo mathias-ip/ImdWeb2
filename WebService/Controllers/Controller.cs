@@ -43,44 +43,81 @@ namespace WebService.Controllers
 
             }
 
-            [HttpGet("search/{id}")]
-            public IActionResult getByName(string id)
+        [HttpGet("search/{arg}", Name = nameof(GetByName))]
+        public IActionResult GetByName(string arg, int page = 0, int pageSize = 10)
+        {
+            var searchitems = _dataService.SearchMovie(arg, page, pageSize);
+            //var si = _mapper.Map<IEnumerable<findingmovieDto>>(searchitems);
+            var numberOfMovies = _dataService.GetSearchMovieCount(arg);
+            //GetSearchCount();//_dataService.SearchNum(id);//amount of items in search
+            var pages = (int)Math.Ceiling((double)numberOfMovies / pageSize);
+            var prev = (string)null;
+            if (page > 0)
             {
-                if (Program.CurrentUser == null)
-                {
-                    return Unauthorized();
-                }
-                try
-                {
-                    var result = _dataService.Search(id);
-                    return Ok(result);
-                }
-                catch (ArgumentException)
-                {
-                    return Unauthorized();
-                }
+                prev = Url.Link(nameof(GetByName), new { arg, page = page - 1, pageSize });
             }
 
-
-            [HttpGet("name/{id2}")]
-            public IActionResult getByName3(string id2)
+            var next = (string)null;
+            if (page < pages - 1)
             {
-
-                var result = _dataService.Search2(id2);
-                Console.WriteLine(result.Count());
-                return Ok(result);
-
+                next = Url.Link(nameof(GetByName), new { arg, page = page + 1, pageSize });
+                Console.WriteLine(next);
             }
 
-            [HttpGet("structuredSearch/{id}")]
-            public IActionResult getByName2(string id)
+            var result = new
             {
-                var result = _dataService.StringSearch("", "see", "", "Mads Mikkelsen", "123");
-                return Ok(result);
+                pageSizes = new int[] { 5, 10, 15, 20 },
+                count = numberOfMovies,
+                pages,
+                prev,
+                next,
+                searchitems
+            };
 
+            return Ok(result);
+
+        }
+
+
+
+
+        [HttpGet("name/{arg}", Name = nameof(GetByName3))]
+        public IActionResult GetByName3(string arg, int page = 0, int pageSize = 10)
+        {
+            var searchitems = _dataService.SearchName(arg, page, pageSize);
+            //var si = _mapper.Map<IEnumerable<findingmovieDto>>(searchitems);
+            var numberOfMovies = _dataService.GetSearchNameCount(arg);
+            //GetSearchCount();//_dataService.SearchNum(id);//amount of items in search
+            var pages = (int)Math.Ceiling((double)numberOfMovies / pageSize);
+            var prev = (string)null;
+            if (page > 0)
+            {
+                prev = Url.Link(nameof(GetByName3), new { arg, page = page - 1, pageSize });
             }
 
-            [HttpPost("CreateUser")]
+            var next = (string)null;
+            if (page < pages - 1)
+            {
+                next = Url.Link(nameof(GetByName3), new { arg, page = page + 1, pageSize });
+                Console.WriteLine(next);
+            }
+
+            var result = new
+            {
+                pageSizes = new int[] { 5, 10, 15, 20 },
+                count = numberOfMovies,
+                pages,
+                prev,
+                next,
+                searchitems
+            };
+
+            return Ok(result);
+
+        }
+
+
+        [HttpPost("CreateUser")]
             public IActionResult createUsers(UserCreationDto userCreationDto)
             {
                 var user = _mapper.Map<User>(userCreationDto);

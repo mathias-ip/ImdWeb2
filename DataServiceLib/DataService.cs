@@ -37,14 +37,16 @@ namespace DataServiceLib
             return _users.FirstOrDefault(x => x.userid == id);
         }
 
-        public IList<SearchResult> Search(string arg)
+        public IList<SearchResult> SearchName(string arg, int page, int pageSize)
         {
             var ctx = new Databasecontext();
-
-            var q = ctx.SearchResults.FromSqlInterpolated($"select * from findingname({arg})");
-
-            return q.ToList();
+            Console.WriteLine(arg);
+            return ctx.SearchResults.FromSqlInterpolated($"select * from findingname({arg.ToLower()})")
+            .Skip(page * pageSize)
+            .Take(pageSize)
+            .ToList();
         }
+
 
         public IList<structuredStringSearch> StringSearch(string arg1, string arg2, string arg3, string arg4, string arg5)
         {
@@ -56,16 +58,47 @@ namespace DataServiceLib
 
         }
 
-       
-
-        public IList<findingmovie> Search2(string arg)
+        public IList<SearchResult> SearchMovie(string arg, int page, int pageSize)
         {
             var ctx = new Databasecontext();
-
-            var p = ctx.findingmovie.FromSqlInterpolated($"select * from findingmovie({arg})");
-
-            return p.ToList();
+            Console.WriteLine(arg);
+            return ctx.SearchResults.FromSqlInterpolated($"select * from findingmovie({arg.ToLower()})")
+            .Skip(page * pageSize)
+            .Take(pageSize)
+            .ToList();
         }
+
+        public int GetSearchMovieCount(string arg)
+        {
+            var ctx = new Databasecontext();
+            var cmd = ctx.Database.GetDbConnection().CreateCommand();
+            cmd.CommandText = "select * from findingmoviecount('" + arg.ToLower() + "')";
+            cmd.Connection.Open();
+            return (int)cmd.ExecuteScalar();
+
+
+        }
+
+        public int GetSearchNameCount(string arg)
+        {
+            var ctx = new Databasecontext();
+            var cmd = ctx.Database.GetDbConnection().CreateCommand();
+            cmd.CommandText = "select * from findingnamecount('" + arg.ToLower() + "')";
+            cmd.Connection.Open();
+            return (int)cmd.ExecuteScalar();
+
+
+        }
+
+
+        /* public IList<findingmovie> Search2(string arg)
+          {
+              var ctx = new Databasecontext();
+
+              var p = ctx.findingmovie.FromSqlInterpolated($"select * from findingmovie({arg})");
+
+              return p.ToList();
+          }*/
 
 
         public void Createuser(User user)
