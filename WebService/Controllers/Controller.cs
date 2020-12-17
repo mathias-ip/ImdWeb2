@@ -43,10 +43,9 @@ namespace WebService.Controllers
         [HttpGet("search/{arg}", Name = nameof(GetByName))]
         public IActionResult GetByName(string arg, int page = 0, int pageSize = 10)
         {
+
             var searchitems = _dataService.SearchMovie(arg, page, pageSize);
-            //var si = _mapper.Map<IEnumerable<findingmovieDto>>(searchitems);
             var numberOfMovies = _dataService.GetSearchMovieCount(arg);
-            //GetSearchCount();//_dataService.SearchNum(id);//amount of items in search
             var pages = (int)Math.Ceiling((double)numberOfMovies / pageSize);
             var prev = (string)null;
             if (page > 0)
@@ -82,9 +81,7 @@ namespace WebService.Controllers
         public IActionResult GetByName3(string arg, int page = 0, int pageSize = 10)
         {
             var searchitems = _dataService.SearchName(arg, page, pageSize);
-            //var si = _mapper.Map<IEnumerable<findingmovieDto>>(searchitems);
             var numberOfMovies = _dataService.GetSearchNameCount(arg);
-            //GetSearchCount();//_dataService.SearchNum(id);//amount of items in search
             var pages = (int)Math.Ceiling((double)numberOfMovies / pageSize);
             var prev = (string)null;
             if (page > 0)

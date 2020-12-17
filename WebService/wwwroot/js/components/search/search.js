@@ -10,9 +10,9 @@
             postman.publish("changeContent", "search");
         }
 
-        let id = ko.observable();
+        let nameId = ko.observable();
         let getNames = () => {
-            fetch('api/Titles/search/' + id())
+            fetch('api/Titles/search/' + nameId())
                 .then(response => response.json())
                 .then(names);
 
@@ -22,11 +22,11 @@
             postman.publish("changeContent", "search2");
         }
 
-        let id2 = ko.observable();
+        let movieId = ko.observable();
         let getMovie = url => {
             movieSearch(true);
             names([]);
-            dataServices.getSearchMovies(url, id2(), data => {
+            dataServices.getSearchMovies(url, movieId(), data => {
                 pageSizes(data.pageSizes);
                 prev(data.prev || undefined);
                 next(data.next || undefined);
@@ -38,7 +38,7 @@
         let getName = url => {
             movieSearch(false);
             movies([]);
-            dataServices.getSearchNames(url, id(), data => {
+            dataServices.getSearchNames(url, nameId(), data => {
                 pageSizes(data.pageSizes);
                 prev(data.prev || undefined);
                 next(data.next || undefined);
@@ -82,11 +82,11 @@
         selectedPageSize.subscribe(() => {
             var size = selectedPageSize()[0];
             if (movieSearch()) {
-                getMovie(dataServices.getSearchMoviesUrlWithPageSize(size, id2()));
+                getMovie(dataServices.getSearchMoviesUrlWithPageSize(size, movieId()));
             }
 
             else {
-                getName(dataServices.getSearchNamesUrlWithPageSize(size, id()));
+                getName(dataServices.getSearchNamesUrlWithPageSize(size, nameId()));
             }
         });
         
@@ -94,11 +94,11 @@
         return {
             gotoContact,
             names,
-            id,
+            nameId,
             getNames,
             getMovie,
             movies,
-            id2,
+            movieId,
             gotoContact2,
             pageSizes,
             selectedPageSize,
