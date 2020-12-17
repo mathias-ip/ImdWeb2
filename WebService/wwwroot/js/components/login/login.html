@@ -177,14 +177,14 @@
 
     <div id="id02" class="modal">
 
-        <form class="modal-content animate" action="/action_page.php" method="post">
+        <form class="modal-content animate" data-bind="submit:createUser" method="post">
 
             <div class="container">
                 <p>Please fill in this form to create an account.</p>
                 <hr>
 
                 <label for="Username"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="Username" required data-bind="value:name">
+                <input type="text" placeholder="Enter Username" name="Username" required data-bind="value:username">
 
                 <label for="email"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email" name="email" required data-bind="value:email">

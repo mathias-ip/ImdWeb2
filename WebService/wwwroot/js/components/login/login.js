@@ -1,33 +1,45 @@
-﻿define(['postman', 'knockout' 'viewModel' 'dataservice'], (postman, ko, vm, ds) => {
+﻿define(['postman', 'knockout'], (postman, ko) => {
     return function (params) {
+
 
         let username = ko.observable();
         let password = ko.observable();
         let email = ko.observable();
 
+
         let createUser = () => {
-
             let user = {
-                username: username();
-                password: password();
-                email: email();
-
+                username: username(),
+                password: password(),
+                email: email()
             };
-            ds.createUser(user, (newUser) => {
-                if (newUser == undefined) {
-                    alert('not correctly signed in');
-                    username('');
-                    password('');
-                    email('');
-                }
 
-                else {
-                    alert('you are signed in')
-                    vm.changeContent('Login');
 
+            fetch('api/Titles/CreateUser/', {
+                method: 'POST',
+                body: JSON.stringify(user),
+                headers: {
+                    
+                    'Content-Type': 'application/json;charset=UTF-8'
                 }
 
             });
+
+            /*  ds.createUser(user, (newUser) => {
+                  if (newUser == undefined) {
+                      alert('not correctly signed in');
+                      username('');
+                      password('');
+                      email('');
+                  }
+  
+                  else {
+                      alert('you are signed in')
+                      vm.changeContent('Search');
+  
+                  }
+  
+              });*/
 
         };
 
