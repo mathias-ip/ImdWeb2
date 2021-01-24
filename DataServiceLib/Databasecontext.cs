@@ -16,7 +16,7 @@ namespace DataServiceLib
         {
             optionsBuilder.UseLoggerFactory(MyLoggerFactory);
 
-            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=..."); //Indtaster host, databasenavn, brugernavn og password
+            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=191191Ippe"); //Indtaster host, databasenavn, brugernavn og password
 
         }
 

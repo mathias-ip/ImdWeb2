@@ -18,9 +18,9 @@ namespace WebService.Controllers
         DataService _dataService;
         private readonly IMapper _mapper;
 
-        public UsersController(DataService, IMapper mapper)
+        public UsersController(DataService dataService, IMapper mapper)
         {
-            DataService _dataService;
+            _dataService = dataService;
             _mapper = mapper;
         }
 

@@ -42,7 +42,7 @@ namespace WebService
             app.UseFileServer();
 
             app.UseRouting();
-            app.UseAuth();
+            //app.UseAuth();
 
             app.UseEndpoints(endpoints =>
             {
