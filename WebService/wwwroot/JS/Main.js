@@ -17,9 +17,9 @@ require.config({
 });
 
 require(['knockout', 'text'], (ko) => {
-       ko.components.register('createuser', {
-        viewModel: { require: "components/createuser/login" },
-        template: { require: "text!components/createuser/login.html" }
+       ko.components.register('signup', {
+        viewModel: { require: "components/createuser/createuser" },
+        template: { require: "text!components/createuser/createuser.html" }
     });
     ko.components.register('search', {
         viewModel: { require: "components/search/search" },
