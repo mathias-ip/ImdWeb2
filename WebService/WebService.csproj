@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\css\Style.css" />
+    <Content Remove="wwwroot\JS\components\home\createuser\createuser.js" />
     <Content Remove="wwwroot\js\components\home\home.js" />
     <Content Remove="wwwroot\js\components\login\login.js" />
     <Content Remove="wwwroot\js\components\profile\profile.js" />
@@ -22,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\JS\components\home\createuser\createuser.js" />
     <None Include="wwwroot\js\components\login\login.js" />
     <None Include="wwwroot\js\components\profile\profile.js" />
     <None Include="wwwroot\js\components\home\home.js" />
