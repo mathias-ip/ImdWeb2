@@ -13,6 +13,7 @@ namespace DataServiceLib
     {
         private List<User> _users = testdata.Users; //Henter dummy data til authorization
 
+        /*
         public User GetUser(string username) // Current user, hentet fra dummy data
         {
 
@@ -20,10 +21,23 @@ namespace DataServiceLib
 
         }
 
-        public User GetUser(int id)
+        /*public User GetUser(int id)
         {
             return _users.FirstOrDefault(x => x.userid == id);
+        } */
+
+        public IList<User> GetUsers()
+        {
+            var ctx = new Databasecontext();
+            return ctx.User.ToList();
+
         }
+        public User GetUser(string username, string password)
+        {
+            var ctx = new Databasecontext();
+            return ctx.User.FirstOrDefault(x => x.username == username && x.password == password);
+        }
+
 
         public IList<NameSearchResult> SearchName(string arg, int page, int pageSize) //Laver search name, ved at hente i database context
         {
@@ -92,11 +106,7 @@ namespace DataServiceLib
 
         }
 
-        public User GetUser(string username, string password)
-        {
-            var ctx = new Databasecontext();
-            return ctx.User.FirstOrDefault(x => x.username == username && x.password == password);
-        }
+        
 
     }
 }

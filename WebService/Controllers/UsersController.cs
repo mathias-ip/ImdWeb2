@@ -15,7 +15,7 @@ namespace WebService.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        dataService _dataService;
+        DataService _dataService;
         private readonly IMapper _mapper;
 
         public UsersController(DataService, IMapper mapper)

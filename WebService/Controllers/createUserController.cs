@@ -29,17 +29,6 @@ namespace WebService.Controllers
             _dataService.Createuser(user);
             return Ok();
         }
-        [HttpPost]
-        public IActionResult GetUser(LoginDto login)
-        {
-
-            var user = _dataService.GetUser(login.username, login.password);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-            return Ok(_mapper.Map<UsersDto>(user));
-        }
-    }
+        
+    } 
 }
