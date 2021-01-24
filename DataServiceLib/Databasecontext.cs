@@ -28,6 +28,9 @@ namespace DataServiceLib
         public DbSet<NameSearchResult> NameSearchResult { get; set; }
         public DbSet<MovieSearchResult> MovieSearchResult { get; set; }
 
+        public DbSet<User> User { get; set; }
+
+
         public DbSet<createuser> createuser { get; set; }
 
 

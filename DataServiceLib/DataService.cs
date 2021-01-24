@@ -79,6 +79,11 @@ namespace DataServiceLib
 
         }
 
-        
+        public User GetUser(string username, string password)
+        {
+            var ctx = new Databasecontext();
+            return ctx.User.FirstOrDefault(x => x.username == username && x.password == password);
+        }
+
     }
 }

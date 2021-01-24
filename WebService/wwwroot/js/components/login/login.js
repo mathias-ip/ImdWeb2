@@ -1,11 +1,25 @@
-﻿define(['postman', 'knockout'], (postman, ko) => {
+﻿define(['postman', 'knockout', 'viewModel'], (postman, ko, vm) => {
     return function (params) {
-
+        
         //laver variable navne til login
         let username = ko.observable();
         let password = ko.observable();
         let email = ko.observable();
-
+        let checkUsername = () => {
+           
+            ds.verifyUser(username(), password(), user => {
+                if (user !== undefined) {
+                    vm.user(user);
+                    alert('You have succesfully logged in!');
+                    vm.changeContent("Home");
+                   
+                }
+                else {
+                    alert('Username or password is incorrect.');
+                    username('');
+                    password('');
+                }
+            });
         //krav til user i form af brugernavn, password og email
         let createUser = () => {
             let user = {
@@ -34,6 +48,7 @@
             password,
             email,
             createUser
+            checkUsername
         };
     }
 });
