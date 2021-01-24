@@ -35,10 +35,28 @@ define([], () => {
         return movieApiUrl + arg + "?pageSize=" + size;
     }
 
+    let verifyUser = (username, password, callback) => {
+        fetch('api/Users/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+        }).
+            then(response => {
+                if (response.status === 404) return undefined;
+                return response.json();
+
+            }).then(callback);
+
+
+    }
+
     return {
         getSearchNames,
         getSearchMovies,
         getSearchNamesUrlWithPageSize,
-        getSearchMoviesUrlWithPageSize
+        getSearchMoviesUrlWithPageSize,
+        verifyUser
     };
 });
