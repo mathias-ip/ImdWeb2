@@ -20,6 +20,7 @@
                     password('');
                 }
             });
+            //mathias...
         //krav til user i form af brugernavn, password og email
         let createUser = () => {
             let user = {
