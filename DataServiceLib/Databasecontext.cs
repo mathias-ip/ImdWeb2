@@ -16,7 +16,7 @@ namespace DataServiceLib
         {
             optionsBuilder.UseLoggerFactory(MyLoggerFactory);
 
-            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=191191Ippe"); //Indtaster host, databasenavn, brugernavn og password
+            optionsBuilder.UseNpgsql("host=localhost;db=imdb;uid=postgres;pwd=..."); //Indtaster host, databasenavn, brugernavn og password
 
         }
 
@@ -32,6 +32,7 @@ namespace DataServiceLib
 
 
         public DbSet<createuser> createuser { get; set; }
+        public DbSet<SearchHistory> SearchHistory { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -56,7 +57,16 @@ namespace DataServiceLib
             modelBuilder.Entity<createuser>().Property(x => x.password).HasColumnName("password");
             modelBuilder.Entity<createuser>().Property(x => x.email).HasColumnName("email");
 
+            modelBuilder.Entity<SearchHistory>().HasKey(x => new { x.Userid, x.SearchDate });
+            modelBuilder.Entity<SearchHistory>().ToTable("searchhistory");
+            modelBuilder.Entity<SearchHistory>().Property(x => x.Userid).HasColumnName("userid");
+            modelBuilder.Entity<SearchHistory>().Property(x => x.SearchEntry).HasColumnName("searchentry");
+            modelBuilder.Entity<SearchHistory>().Property(x => x.SearchDate).HasColumnName("searchdate");
+
+
+
         }
+
     }
 
 

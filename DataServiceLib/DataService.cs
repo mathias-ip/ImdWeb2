@@ -36,7 +36,20 @@ namespace DataServiceLib
         }
 
 
+        public IList<SearchHistory> GetSearchHistory(int? userid)
+        {
+            var ctx = new Databasecontext();
+            return ctx.SearchHistory.ToList();
 
+        }
+
+
+        public IList<SearchHistory> GetSearchHistory(int userid)
+        {
+            var ctx = new Databasecontext();
+
+            return ctx.SearchHistory.Where(x => x.Userid == userid).OrderByDescending(x => x.SearchDate).ToList();
+        }
 
         public IList<MovieSearchResult> SearchMovie(string arg, int page, int pageSize) //Søger search movie, ved at hente fra database context
         {
