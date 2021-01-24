@@ -1,4 +1,4 @@
-﻿define(['postman', 'knockout'], (postman, ko) => {
+﻿define(['postman', 'knockout', 'viewModel'], (postman, ko, vm) => {
     return function (params) {
 
 
@@ -14,6 +14,7 @@
                 username: username(),
                 password: password(),
                 email: email()
+
             };
 
 
@@ -25,7 +26,9 @@
 
                     'Content-Type': 'application/json;charset=UTF-8'
                 }
-            });
+            
+                });
+            vm.changeContent("Home");
 
         };
         return {
