@@ -1,41 +1,34 @@
-﻿define(['postman', 'knockout', 'viewModel'], (postman, ko, vm) => {
+﻿define(['knockout', 'dataServices', 'viewModel'], (ko, ds, vm) => {
     return function (params) {
-
-
-        //laver variable navne til login
+        vm.user(undefined);
         let username = ko.observable();
         let password = ko.observable();
-        let email = ko.observable();
 
+        let checkUsername = () => {
 
-        //krav til user i form af brugernavn, password og email
-        let createUser = () => {
-            let user = {
-                username: username(),
-                password: password(),
-                email: email()
+            ds.verifyUser(username(), password(), user => {
+                if (user !== undefined) {
+                    vm.user(user);
+                    alert('You have succesfully logged in!');
+                    vm.changeContent("Home");
 
-            };
-
-
-                //Sender dataen tilbage til datalaget ved hjælp af post
-                fetch('user/CreateUser/', {
-                    method: 'POST',
-                    body: JSON.stringify(user),
-                headers: {
-
-                    'Content-Type': 'application/json;charset=UTF-8'
                 }
-            
-                });
-            vm.changeContent("Home");
+                else {
+                    alert('Username or password is incorrect.');
+                    username('');
+                    password('');
+                }
+            });
 
         };
+
         return {
             username,
             password,
-            email,
-            createUser
+            checkUsername
+
         };
+
     }
+
 });
