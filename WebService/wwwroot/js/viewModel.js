@@ -12,6 +12,8 @@
 
     postman.subscribe("changeContent", component => {
         changeContent(component);
+
+
     });
     return {
         currentComponent,
