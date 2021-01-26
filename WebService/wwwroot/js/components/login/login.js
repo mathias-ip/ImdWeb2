@@ -6,7 +6,7 @@
 
         let checkUsername = () => {
 
-            ds.verifyUser(username(), password(), user => {
+            ds.verifyUser(username(), password(), user => 
                 if (user !== undefined) {
                     vm.user(user);
                     alert('You have succesfully logged in!');

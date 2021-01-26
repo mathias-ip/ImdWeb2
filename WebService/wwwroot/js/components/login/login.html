@@ -142,11 +142,11 @@
 
     <h2> Login</h2>
 
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    <button onclick="document.getElementById('id01').style.display='block'" data-bind="click: checkUsername" style="width:auto;">Login</button>
 
     <div id="id01" class="modal">
     <!-- Div klasser kaldt fra-->
-        <form class="modal-content animate" action="/action_page.php" method="post">
+        <form class="modal-content animate" method="post">
 
 
             <div class="container">
