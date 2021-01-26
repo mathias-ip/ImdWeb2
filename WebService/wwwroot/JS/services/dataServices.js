@@ -18,6 +18,8 @@ define([], () => {
     };
 
 
+    //let getSearchHistory = (username, url, callback)
+
 
     let getSearchNames = (url, id2, callback) => {
 

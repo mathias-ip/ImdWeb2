@@ -1,5 +1,7 @@
 ﻿define(['knockout', 'postman'], (ko, postman) => { 
     let currentComponent = ko.observable("home");
+    let user = ko.observable();
+ 
     let menuElements = ["Signup", "Login", "Home", "Profile", "Search"]; //menuer i navigationsmappen
     let changeContent = element => {
         
@@ -13,12 +15,16 @@
     postman.subscribe("changeContent", component => {
         changeContent(component);
 
+       
+
 
     });
+
     return {
         currentComponent,
         menuElements,
         changeContent,
-        isActive
+        isActive,
+        user
     };
 });

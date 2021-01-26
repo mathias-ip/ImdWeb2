@@ -52,16 +52,25 @@ namespace DataServiceLib
             modelBuilder.Entity<bookmark>().Property(x => x.titleid).HasColumnName("titleid");
             modelBuilder.Entity<bookmark>().Property(x => x.nameid).HasColumnName("nameid");
 
-            modelBuilder.Entity<createuser>().HasNoKey();
+            
+           /* modelBuilder.Entity<createuser>().HasNoKey();
+            modelBuilder.Entity<createuser>().ToTable("users");
             modelBuilder.Entity<createuser>().Property(x => x.username).HasColumnName("username");
             modelBuilder.Entity<createuser>().Property(x => x.password).HasColumnName("password");
             modelBuilder.Entity<createuser>().Property(x => x.email).HasColumnName("email");
-
+           */
             modelBuilder.Entity<SearchHistory>().HasKey(x => new { x.Userid, x.SearchDate });
             modelBuilder.Entity<SearchHistory>().ToTable("searchhistory");
             modelBuilder.Entity<SearchHistory>().Property(x => x.Userid).HasColumnName("userid");
             modelBuilder.Entity<SearchHistory>().Property(x => x.SearchEntry).HasColumnName("searchentry");
             modelBuilder.Entity<SearchHistory>().Property(x => x.SearchDate).HasColumnName("searchdate");
+
+            modelBuilder.Entity<User>().HasNoKey();
+            modelBuilder.Entity<User>().ToTable("users");
+            modelBuilder.Entity<User>().Property(x => x.userid).HasColumnName("userid");
+            modelBuilder.Entity<User>().Property(x => x.username).HasColumnName("username");
+            modelBuilder.Entity<User>().Property(x => x.password).HasColumnName("password");
+            modelBuilder.Entity<User>().Property(x => x.email).HasColumnName("email");
 
 
 

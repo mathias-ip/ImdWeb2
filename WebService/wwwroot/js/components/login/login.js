@@ -6,11 +6,13 @@
 
         let checkUsername = () => {
 
-            ds.verifyUser(username(), password(), user => 
-                if (user !== undefined) {
+            ds.verifyUser(username(), password(), user => {
+
+               if (user !== undefined) {
                     vm.user(user);
                     alert('You have succesfully logged in!');
-                    vm.changeContent("Home");
+                   vm.changeContent("Home");
+                   console.log('wuhu');
 
                 }
                 else {
@@ -26,6 +28,7 @@
             username,
             password,
             checkUsername
+            
 
         };
 
